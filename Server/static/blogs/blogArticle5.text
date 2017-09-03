@@ -1,0 +1,77 @@
+<p>今天在做一个项目的时候用到了ViewSwitcher，然而却遇到了子布局无法居中的问题，以下是问题代码</p>
+
+<p>&nbsp;</p>
+
+<p>historySwitcher = (ViewSwitcher) findViewById(R.id.history_container);</p>
+
+<p>historySwitcher.setFactory(new ViewSwitcher.ViewFactory() {</p>
+
+<p>&nbsp; &nbsp;// 实际上就是返回一个view</p>
+
+<p>&nbsp; &nbsp;@Override</p>
+
+<p>&nbsp; &nbsp;public View makeView() {</p>
+
+<p>&nbsp; &nbsp; &nbsp; return LayoutInflater.from(mContext).inflate(R.layout.history_view,null);</p>
+
+<p>&nbsp; &nbsp;}</p>
+
+<p>});</p>
+
+<p><br />
+按照网上的例子，直接以匿名内部类的方法新建了viewFactory</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>之后，对获取到的view进行加工</p>
+
+<p>&nbsp;</p>
+
+<p>SpannableStringBuilder text= new SpannableStringBuilder(mContext.getResources().getString(R.string.history_empty));</p>
+
+<p>text.setSpan(new AbsoluteSizeSpan(60), 0, text.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);</p>
+
+<p>viewToShow.findViewById(R.id.history_list).setVisibility(View.GONE);</p>
+
+<p>TextView tv = viewToShow.findViewById(R.id.history_action_name);</p>
+
+<p>tv.setText(text);</p>
+
+<p>viewToShow.setForegroundGravity(Gravity.CENTER);</p>
+
+<p>historySwitcher.showNext();</p>
+
+<p>&nbsp;</p>
+
+<p><br />
+这时候遇到问题，上述代码的textview无论如何都无法居中</p>
+
+<p>&nbsp;</p>
+
+<p>将布局染色后发现，R.layout.history_view这个布局没有填满预留出的位置，导致此问题</p>
+
+<p>&nbsp;</p>
+
+<p>排查后发现，是由于ViewSwitcher返回的view没有绑定根所导致的，修改第一段代码如下</p>
+
+<p>historySwitcher = (ViewSwitcher) findViewById(R.id.history_container);</p>
+
+<p>historySwitcher.setFactory(new ViewSwitcher.ViewFactory() {</p>
+
+<p>&nbsp; &nbsp;// 实际上就是返回一个view</p>
+
+<p>&nbsp; &nbsp;@Override public View makeView() {</p>
+
+<p>&nbsp; &nbsp; &nbsp; return LayoutInflater.from(mContext).inflate(R.layout.history_view,(ViewGroup) getWindow().getDecorView().findViewById(android.R.id.content),false);</p>
+
+<p>&nbsp; &nbsp; }</p>
+
+<p>});</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>注意，为了使布局摆放更加合理，应主动绑定父布局</strong></p>

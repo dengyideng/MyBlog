@@ -1,0 +1,36 @@
+<p>本篇主要讲了如下知识，主要用于自我学习。</p>
+
+                                <blockquote>
+                                <p>主要引用了keras中文文档</p>
+                                </blockquote>
+
+                                <ol>
+	                                <li>keras模型</li>
+	                                <li>网络层</li>
+	                                <li>网络配置</li>
+                                </ol>
+
+                                <h3><a name='t0'></a><strong>keras模型</strong></h3>
+
+                                <ol>
+	                                <li>序贯模型(Sequential)</li>
+	                                <li>函数式模型(Model)</li>
+                                </ol>
+
+                                <p><a name='t1'></a><strong>序贯模型</strong></p>
+
+                                <p>序贯模型是多个网络层的线性堆叠，可以通过<code>Sequential</code>模型来传递一个<code>layer</code>的list来构造该模型</p>
+
+                                <pre>
+                                <code>&quot;&quot;&quot;
+                                Sequential模型方法
+                                &quot;&quot;&quot;&quot;
+                                from keras.models import Sequential
+                                from keras.layers import Dense,Activation
+
+                                model = Sequential()
+                                model.add(Dense(32,input_shape=(784,)))
+                                model.add(Activation(&#39;relu&#39;))</code>
+                                </pre>
+
+                                <p><a name='t2'></a><strong>函数式模型</strong></p>

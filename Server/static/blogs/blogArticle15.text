@@ -1,0 +1,354 @@
+<h3><strong>序言</strong></h3>
+
+                                <p>通过这篇文章总结<strong>创建型设计模式</strong>的要点、结构和适用范围。接下来会就具体每一种设计模式进行学习。</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <h3><a name='t1'></a><strong>创建型模式分类</strong></h3>
+
+                                <blockquote>
+                                <p>简单工厂模式</p>
+
+                                <p>工厂方法模式</p>
+
+                                <p>抽象工厂模式</p>
+
+                                <p>单例模式/单件模式</p>
+
+                                <p>原型模式</p>
+
+                                <p>建造者模式/生成器模式</p>
+                                </blockquote>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <h3><a name='t2'></a><strong>1. 简单工厂模式</strong></h3>
+
+                                <ul>
+	                                <li><strong>结构</strong>&nbsp;
+
+	                                <p><br />
+	                                <img src='http://img.blog.csdn.net/20170819212032103?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMzU2OTI2Mjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast' style='height:25%px; width:70%px' /></p>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>简单工厂模式示意图</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <ul>
+	                                <li>
+	                                <p><strong>要点</strong></p>
+
+	                                <ul>
+		                                <li>需要什么，只需要传入一个正确的参数，就可以获取你所需要的对象，而无须知道其创建细节</li>
+	                                </ul>
+	                                </li>
+	                                <li>
+	                                <p><strong>适用范围</strong></p>
+
+	                                <ul>
+		                                <li>
+		                                <p>工厂类负责创建的对象比较少，由于创建的对象较少，不会造成工厂方法中的业务逻辑太过复杂。</p>
+		                                </li>
+		                                <li>
+		                                <p>客户端只知道传入工厂类的参数，对于如何创建对象并不关心。</p>
+		                                </li>
+	                                </ul>
+	                                </li>
+                                </ul>
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <h3><a name='t3'></a><strong>2. 工厂方法模式</strong></h3>
+
+                                <ul>
+	                                <li><strong>结构</strong>&nbsp;
+
+	                                <p><br />
+	                                <img src='http://img.blog.csdn.net/20170819214237144?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMzU2OTI2Mjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast' style='height:25%px; width:70%px' /></p>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>工厂方法模式示意图</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <ul>
+	                                <li>
+	                                <p><strong>举例</strong></p>
+
+	                                <p>水果园&mdash;〉（葡萄园，苹果园）&ndash;〉（葡萄，苹果）（各自生产）</p>
+	                                </li>
+	                                <li>
+	                                <p><strong>要点</strong></p>
+
+	                                <ul>
+		                                <li>
+		                                <p>定义一个用于创建对象的接口，让子类决定实例化哪一个类。使一个类实例化延迟到期子类。</p>
+		                                </li>
+		                                <li>
+		                                <p>不再提供一个统一的工厂类来创建所有的产品对象，而是<strong>针对不同的产品提供不同的工厂</strong>，系统提供一个与产品等级结构对应的工厂等级结构。</p>
+		                                </li>
+	                                </ul>
+	                                </li>
+	                                <li>
+	                                <p><strong>适用范围</strong>&nbsp;<br />
+	                                在下列情况可以使用工厂方法模式</p>
+
+	                                <ul>
+		                                <li>
+		                                <p>当一个类不知道它所必须创建的对象的类的时候</p>
+		                                </li>
+		                                <li>
+		                                <p>当一个类希望由它的子类来制定它所创建的对象的时候</p>
+		                                </li>
+		                                <li>
+		                                <p>当类将创建对象的职责委托给多个帮助子类中的某一个，并且你希望将哪一个帮助子类是代理者这一信息局部化的时候</p>
+		                                </li>
+	                                </ul>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <h3><a name='t4'></a><strong>3. 抽象工厂模式</strong></h3>
+
+                                <ul>
+	                                <li><strong>结构</strong></li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p><br />
+                                <img src='http://img.blog.csdn.net/20170819214955926?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMzU2OTI2Mjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast' style='height:25%px; width:70%px' /></p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>抽象工厂模式示意图</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <ul>
+	                                <li>
+	                                <p><strong>举例</strong></p>
+
+	                                <p>女娲造人&mdash;〉（阴，阳）&ndash;〉（人，兽）&mdash;-〉（男人，女人，公兽，母兽）(人和兽属于不同的产品类)</p>
+	                                </li>
+	                                <li>
+	                                <p><strong>要点</strong></p>
+
+	                                <ul>
+		                                <li>
+		                                <p>提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类</p>
+		                                </li>
+		                                <li>
+		                                <p>与工厂方法模式相比，抽象工厂模式中的具体工厂不只是创建一种产品，它负责创建一族产品</p>
+		                                </li>
+	                                </ul>
+	                                </li>
+	                                <li>
+	                                <p><strong>适用范围</strong></p>
+
+	                                <ul>
+		                                <li>
+		                                <p>一个系统要独立于它的产品的创建、组合和表示时</p>
+		                                </li>
+		                                <li>
+		                                <p>一个系统要由多个产品系列中的一个来配置时</p>
+		                                </li>
+		                                <li>
+		                                <p>当你要强调一系列相关产品对象的设计以便进行联合使用时</p>
+		                                </li>
+		                                <li>
+		                                <p>当你提供一个产品类库，而只想显示它们的接口而不是实现时</p>
+		                                </li>
+	                                </ul>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <h3><a name='t5'></a><strong>4. 单例模式</strong></h3>
+
+                                <ul>
+	                                <li><strong>结构</strong>&nbsp;
+
+	                                <p><br />
+	                                <img src='http://img.blog.csdn.net/20170819215636732?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMzU2OTI2Mjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast' style='height:25%px; width:50%px' /></p>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>单例模式示意图</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <ul>
+	                                <li>
+	                                <p><strong>举例</strong></p>
+
+	                                <p>账本类：1 单一实例 2 给多个对象共享 3 自己创建</p>
+	                                </li>
+	                                <li>
+	                                <p><strong>要点</strong></p>
+
+	                                <ul>
+		                                <li>保证一个类仅有一个实例，并提供一个访问它的全局访问点</li>
+	                                </ul>
+	                                </li>
+	                                <li>
+	                                <p><strong>适用范围</strong></p>
+
+	                                <ul>
+		                                <li>
+		                                <p>当类只能有一个实例而且客户可以从一个众所周知的访问点访问它时</p>
+		                                </li>
+		                                <li>
+		                                <p>当这个唯一实例应该是通过子类化可扩展的，并且客户应该无需更改代码就能使用一个扩展的实例时</p>
+		                                </li>
+	                                </ul>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <h3><a name='t6'></a><strong>5. 原型模式</strong></h3>
+
+                                <ul>
+	                                <li><strong>结构</strong>&nbsp;
+
+	                                <p><br />
+	                                <img src='http://img.blog.csdn.net/20170819220353999?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMzU2OTI2Mjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast' style='height:25%px; width:70%px' /></p>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>原型模式示意图</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <ul>
+	                                <li>
+	                                <p><strong>举例</strong></p>
+
+	                                <p>复印技术： 1 不是同一个对象 2 属同类</p>
+
+	                                <p>短消息（转发） 1-n个MM</p>
+	                                </li>
+	                                <li>
+	                                <p><strong>要点</strong></p>
+
+	                                <ul>
+		                                <li>用原型实例制定创建对象的种类，并且通过拷贝这些原型创建新的对象</li>
+	                                </ul>
+	                                </li>
+	                                <li>
+	                                <p><strong>适用范围</strong>&nbsp;<br />
+	                                当一个系统应该单独于它的产品创建、构成和表示时，要使用原型模式</p>
+
+	                                <ul>
+		                                <li>
+		                                <p>当要实例化的类是在运行时刻指定时，例如，通过动态装载。</p>
+		                                </li>
+		                                <li>
+		                                <p>为了避免创建一个与产品类层次平行的工厂类层次时。</p>
+		                                </li>
+		                                <li>
+		                                <p>当一个类的实例只能有几个不同状态组合中的一种时，创建相应数目的原型并克隆它们可能比每次用合适的状态手工实例化该类更方便一些。</p>
+		                                </li>
+	                                </ul>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <h3><a name='t7'></a><strong>6. 建造者模式</strong></h3>
+
+                                <ul>
+	                                <li><strong>结构</strong>&nbsp;
+
+	                                <p><br />
+	                                <img src='http://img.blog.csdn.net/20170819221151666?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMzU2OTI2Mjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast' style='height:25%px; width:70%px' /></p>
+	                                </li>
+                                </ul>
+
+                                <p>&nbsp;</p>
+
+                                <p>建造者模式示意图</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <ul>
+	                                <li>
+	                                <p><strong>举例</strong></p>
+
+	                                <p>汽车制造</p>
+	                                </li>
+	                                <li>
+	                                <p><strong>要点</strong></p>
+
+	                                <ul>
+		                                <li>将一个复杂对象的构建和它的表示分离，使得同样的构建过程可以创建不同的表示</li>
+	                                </ul>
+	                                </li>
+	                                <li>
+	                                <p><strong>适用范围</strong></p>
+
+	                                <ul>
+		                                <li>
+		                                <p>当创建复杂对象的<a href='http://lib.csdn.net/base/datastructure' target='_blank'>算法</a>应该独立于该对象的组成部分以及它们的装配方式时。</p>
+		                                </li>
+		                                <li>
+		                                <p>当构造过程必须允许被构造的对象有不同的表示时。</p>
+		                                </li>
+	                                </ul>
+	                                </li>
+                                </ul>

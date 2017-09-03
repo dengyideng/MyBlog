@@ -1,0 +1,126 @@
+<h1>欢迎使用Markdown编辑器写博客</h1>
+
+                                <p>本Markdown编辑器使用<a href='https://github.com/benweet/stackedit' target='_blank'>StackEdit</a>修改而来，用它写博客，将会带来全新的体验哦：</p>
+
+                                <ul>
+	                                <li>
+	                                <p><strong>Markdown和扩展Markdown简洁的语法</strong></p>
+	                                </li>
+	                                <li>
+	                                <p><strong>代码块高亮</strong></p>
+	                                </li>
+	                                <li>
+	                                <p><strong>图片链接和图片上传</strong></p>
+	                                </li>
+	                                <li>
+	                                <p><strong><em>LaTex</em>数学公式</strong></p>
+	                                </li>
+	                                <li>
+	                                <p><strong>UML序列图和流程图</strong></p>
+	                                </li>
+	                                <li>
+	                                <p><strong>离线写博客</strong></p>
+	                                </li>
+	                                <li>
+	                                <p><strong>导入导出Markdown文件</strong></p>
+	                                </li>
+	                                <li>
+	                                <p><strong>丰富的快捷键</strong></p>
+	                                </li>
+                                </ul>
+
+                                <hr />
+                                <h2><a name='t2'></a>快捷键</h2>
+
+                                <ul>
+	                                <li>
+	                                <p>加粗&nbsp;<code>Ctrl + B</code></p>
+	                                </li>
+	                                <li>
+	                                <p>斜体&nbsp;<code>Ctrl + I</code></p>
+	                                </li>
+	                                <li>
+	                                <p>引用&nbsp;<code>Ctrl + Q</code></p>
+	                                </li>
+	                                <li>
+	                                <p>插入链接&nbsp;<code>Ctrl + L</code></p>
+	                                </li>
+	                                <li>
+	                                <p>插入代码&nbsp;<code>Ctrl + K</code></p>
+	                                </li>
+	                                <li>
+	                                <p>插入图片&nbsp;<code>Ctrl + G</code></p>
+	                                </li>
+	                                <li>
+	                                <p>提升标题&nbsp;<code>Ctrl + H</code></p>
+	                                </li>
+	                                <li>
+	                                <p>有序列表&nbsp;<code>Ctrl + O</code></p>
+	                                </li>
+	                                <li>
+	                                <p>无序列表&nbsp;<code>Ctrl + U</code></p>
+	                                </li>
+	                                <li>
+	                                <p>横线&nbsp;<code>Ctrl + R</code></p>
+	                                </li>
+	                                <li>
+	                                <p>撤销&nbsp;<code>Ctrl + Z</code></p>
+	                                </li>
+	                                <li>
+	                                <p>重做&nbsp;<code>Ctrl + Y</code></p>
+	                                </li>
+                                </ul>
+
+                                <h2><a name='t3'></a>Markdown及扩展</h2>
+
+                                <blockquote>
+                                <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。 &mdash;&mdash;&nbsp;<a href='https://zh.wikipedia.org/wiki/Markdown' target='_blank'>[ 维基百科 ]</a></p>
+                                </blockquote>
+
+                                <p>使用简单的符号标识不同的标题，将某些文字标记为<strong>粗体</strong>或者<em>斜体</em>，创建一个<a href='http://www.csdn.net/' target='_blank'>链接</a>等，详细语法参考帮助？。</p>
+
+                                <p>本编辑器支持&nbsp;<strong>Markdown Extra</strong>&nbsp;, 　扩展了很多好用的功能。具体请参考<a href='https://github.com/jmcmanus/pagedown-extra' target='_blank'>Github</a>.</p>
+
+                                <h3><a name='t4'></a>表格</h3>
+
+                                <p><strong>Markdown　Extra</strong>　表格语法：</p>
+
+                                <p>项目 | 价格</p>
+
+                                <p>&mdash;&mdash;&ndash; | &mdash;</p>
+
+                                <p>Computer | $1600</p>
+
+                                <p>Phone | $12</p>
+
+                                <p>Pipe | $1</p>
+
+                                <p>可以使用冒号来定义对齐方式：</p>
+
+                                <p>| 项目 | 价格 | 数量 |</p>
+
+                                <p>| :&mdash;&mdash;&ndash; | &mdash;&mdash;&ndash;:| :&ndash;: |</p>
+
+                                <p>| Computer | 1600 元 | 5 |</p>
+
+                                <p>| Phone | 12 元 | 12 |</p>
+
+                                <p>| Pipe | 1 元 | 234 |</p>
+
+                                <h3><a name='t5'></a>定义列表</h3>
+
+                                <p><strong>Markdown　Extra</strong>　定义列表语法：</p>
+
+                                <p>项目１</p>
+
+                                <p>项目２</p>
+
+                                <p>定义 A</p>
+
+                                <p>定义 B</p>
+
+                                <p>项目３</p>
+
+                                <p>定义 C</p>
+
+                                <p>定义 D</p>

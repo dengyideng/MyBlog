@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='../icon/icons/favicon.ico')
+    title MyBlog注册
+    link(rel='stylesheet', type='text/css', href='../css/register_css.css')
+    link(rel='stylesheet', type='text/css', href='../icon/icons/iconfont.css')
+  body
+    .container
+      .pictureAd
+        img(src='../picture/login_picture.jpg', height='500')
+      .loginBox(data='#{params.errorcode}' account='#{params.account}' loginaccount='#{params.loginaccount}')
+        form(action='registerDeal', method='get')
+          span 账号注册
+          input.textbox(type='text', name='username', value='输入用户名(昵称)')
+          br
+          input.textbox(type='text', name='password', value='输入密码')
+          br
+          input.textbox(type='text', name='passwordAgain', value='再次输入密码')
+          br
+          input.loginOption(type='checkbox', name='loginOption')
+          label 注册后登录
+          input.login_button(type='submit', name='login', value='立即注册')
+      .clearFloat
+    script(type='text/javascript', src='/javascript/register_js.js')

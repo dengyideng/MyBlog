@@ -1,0 +1,117 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='../icon/icons/favicon.ico')
+    title MyBlog个人展示
+    link(rel='stylesheet', type='text/css', href='../css/personShow_css.css')
+    link(rel='stylesheet', type='text/css', href='../icon/icons/iconfont.css')
+  body
+    #head
+      #banner
+        #left
+          p W
+        #right
+          p MyBlog
+        .index
+          i.iconfont.icon-index
+          a(href='/index?page=1&loginaccount=#{params.login.account}') 回到首页
+    #content_container
+      .content_head_background
+      .content_left
+        .content_left_top
+          .personalMess 个人资料
+          .messageDetails
+            img(src='#{params.blogger.photo}')
+            br
+            span #{params.blogger.nickName}
+            br
+            a.focusHim(href='/addFocus?loginaccount=#{params.login.account}&account=#{params.blogger.account}&requestPage=blogsShow&focusAccount=#{params.blogger.account}', statuscode='#{params.statusCode}')
+              i.iconfont.icon-add.userDefined
+              span 关注
+        .content_left_achievement
+          .achievement_label 个人成就
+          .myAchievement
+            dl
+              dd
+                i.iconfont.icon-views
+                | 			    			阅读数: 
+                span #{params.blogger.readCount}
+              dd
+                i.iconfont.icon-add
+                | 			    			关注数: 
+                span #{params.blogger.focusedCount}
+              dd
+                i.iconfont.icon-edit
+                | 			    			文章数: 
+                span #{params.blogger.blogsCount}
+        .content_left_middle
+          .listByCategory 文章分类
+          dl
+            dd
+              a.navigator(href='/blogsShow?category=android&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-shouji
+                span 移动开发(#{params.blogger.allBlogsListByCategory.android})
+            dd
+              a.navigator(href='/blogsShow?category=database&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-shujuku
+                span 数据库(#{params.blogger.allBlogsListByCategory.database})
+            dd
+              a.navigator(href='/blogsShow?category=web&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-qianduan
+                span 前端(#{params.blogger.allBlogsListByCategory.web})
+            dd
+              a.navigator(href='/blogsShow?category=cloud&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-yun
+                span 云计算(#{params.blogger.allBlogsListByCategory.cloud})
+            dd
+              a.navigator(href='/blogsShow?category=java&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-java
+                span Java开发(#{params.blogger.allBlogsListByCategory.java})
+            dd
+              a.navigator(href='/blogsShow?category=others&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-all
+                span 其他(#{params.blogger.allBlogsListByCategory.others})
+      .content_right
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[0].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[0].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[1].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[1].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[2].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[2].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[3].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[3].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[4].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[4].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[5].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[5].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[6].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[6].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[7].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[7].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[8].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[8].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/blogsShow?blogid=#{params.blogs[9].blogId}&loginaccount=#{params.login.account}')
+            b #{params.blogs[9].title}
+      .clearFloat
+    script(type='text/javascript', src='/javascript/personShow_js.js')

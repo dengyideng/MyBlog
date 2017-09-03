@@ -1,0 +1,285 @@
+body{
+	margin: 0;
+}
+
+p{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+h3{
+	margin: 0;
+}
+
+#banner{
+	background-color: rgb(72, 82, 94);
+	height: 40px;
+}
+
+#left{
+	width: 40px;
+	height: 40px;
+	margin-left: 70px;
+	background-color: rgb(204, 0, 0);
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+	font-size: 28px;
+	font-family: 微软雅黑;
+	float: left;
+}
+
+#right{
+	float: left;
+	color: white;
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 25px;
+}
+
+#navigationBar{
+	height: 47px;
+	border-bottom: 3px solid rgb(225, 225, 225);
+}
+
+.navigator{
+	height: 47px;
+	margin-left: 70px;
+	float: left;
+}
+
+#navigatorBlogExperts{
+	border-bottom: 3px solid rgb(204, 0, 0);
+}
+
+.navigator:hover{
+	border-bottom: 3px solid rgb(204, 0, 0);
+}
+
+.navigator>a{
+	text-decoration: none;
+	color: #5b5b5b;
+	line-height: 47px;
+	font-size: 20px;
+	font-family: 微软雅黑;
+}
+
+.register{
+	float: right;
+	padding-right: 2px;
+	border-right: 1px solid #5b5b5b;
+	height: 16px;
+	position: relative;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.login{
+	float: right;
+	margin-right: 30px;
+	padding-left: 2px;
+	height: 16px;
+	position: relative;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.welcome{
+	float: right;
+	height: 16px;
+	position: relative;
+	top: 50%;
+	margin-top: -8px;
+	margin-right: 20px;
+	font-family: Microsoft yahei;
+	color:  #5b5b5b;
+	font-size: 15px;
+}
+
+.login>a{
+	color: #5b5b5b;
+	text-decoration: none;
+	line-height: 16px;
+	font-family: 微软雅黑;
+	font-size: 15px;
+	vertical-align: top;
+}
+
+.register>a{
+	color: #5b5b5b;
+	text-decoration: none;
+	line-height: 16px;
+	font-family: 微软雅黑;
+	font-size: 15px;
+	vertical-align: top;
+}
+
+.expert_banner{
+	height: 330px;
+	width: 100%;
+	background: #338dba url("../")
+}
+
+.expert_banner{
+	height: 330px;
+	width: 100%;
+	background: #338dba url("../picture/blogExperts_bg.jpg") repeat-x;
+}
+
+.expert_banner_c{
+	height: 330px;
+	margin-left: 158px;
+	background: url("../picture/blogExperts.jpg") no-repeat;
+	padding: 110px 0 0 290px;
+	font-size: 14px;
+	color: white;
+	font-family: Microsoft yahei;
+}
+
+.blogExperts_privilege{
+	list-style: none;
+	padding-left: 0;
+}
+
+.expert_content_container{
+	background-color: rgb(231, 236, 239);
+	padding: 20px 60px 60px 60px;
+}
+
+.expert_content{
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.expert_content_title{
+	padding-left: 30px;
+	height: 50px;
+	line-height: 50px;
+	font-family: Microsoft yahei;
+	border-bottom: 1px solid rgb(231, 236, 239);
+}
+
+.expert_content_experts{
+	padding: 10px 0 30px 28px;
+	position: relative;
+}
+
+.expert_message{
+	width: 258px;
+	height: 220px;
+	border: 1px solid rgb(231, 236, 239);
+	margin: 60px 30px 0 0;
+	background-color: rgb(248, 250, 251);
+	float: left;
+}
+
+.clear_float{
+	clear: both;
+}
+
+.head_portrait{
+	height: 80px;
+	width: 80px;
+	position: relative;
+	left: 50%;
+	margin: -40px 0 0 -40px;
+}
+
+.head_portrait>img{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+}
+
+.name{
+	font-family: Microsoft yahei;
+	text-align: center;
+	line-height: 40px;
+}
+
+.name>a{
+	color: #666;
+	font-size: 14px;
+}
+
+.position{
+	font-family: Microsoft yahei;
+	text-align: center;
+	color: #999;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.position_location{
+	display: inline-block;
+}
+
+.position_job{
+	display: inline-block;
+	margin-left: 5px;
+	padding-left: 10px;
+	border-left: 1px solid #999;
+}
+
+.article_message{
+	text-align: center;
+	width: 129px;
+	height: 60px;
+	padding: 15px 0 0 0;
+	float: left;
+}
+
+.views_time{
+	text-align: center;
+	width: 129px;
+	height: 60px;
+	padding: 15px 0 0 0;
+	float: left;
+}
+
+.article_account, .views_time>b{
+	color: #338dba;
+	font-size: 18px;
+	font-family: Microsoft yahei;
+}
+
+.article_account_label, .views_time>span{
+	font-family: Microsoft yahei;
+    color: #999;
+    font-size: 14px;
+}
+
+.focusHim{
+	height: 40px;
+	text-align: center;
+}
+
+.focusHim>a{
+	display: inline-block;
+	color: #338dba;
+	border: 1px solid #338dba;
+	border-radius: 15px;
+	height: 30px;
+	width: 80px;
+	background-color: rgb(248, 250, 251);
+	font-size: 14px;
+	font-family: Microsoft yahei;
+	line-height: 30px;
+}
+
+.focusHim>a:hover{
+	color: white;
+	background-color: #338dba;
+}
+
+.name>a:hover{
+	color: #8c6c6c;
+}
+
+a.notNavigator:hover{
+	color: rgb(204, 0, 0);
+}

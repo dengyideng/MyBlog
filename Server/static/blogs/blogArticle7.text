@@ -1,0 +1,22 @@
+<p>部分组成</p>
+
+                                <pre>
+                                <code>一个或者多个DML语句
+
+                                一个DDL（Date Definition Language）语句
+
+                                一个DCL（Date Control Language）语句
+                                </code></pre>
+
+                                <p><a name='t1'></a>开始结束标志</p>
+
+                                <pre>
+                                <code>以第一个DML语句的执行作为开始
+
+                                以下面的其中之一作为结束
+
+                                显示结束：commit rollback
+
+                                隐式结束（自动提交）：DDL语言，DCL语言，exit（事务正常退出）
+
+                                隐式回滚（系统异常终了）：关闭窗口，死机，掉电</code></pre>

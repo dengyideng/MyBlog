@@ -1,0 +1,23 @@
+<p><strong>强烈使用utf8mb4代替utf8，因为utf8支持的字符集非常有限。</strong></p>
+
+                                <p>具体操作如下：&nbsp;<br />
+                                1、修改<a href='http://lib.csdn.net/base/mysql' target='_blank'>MySQL</a>配置</p>
+
+                                <pre>
+                                <code>[mysql]
+                                default-character-set=utf8mb4
+
+                                [mysqld]
+                                character-set-server=utf8mb4
+                                collation-server=utf8mb4_unicode_ci</code>
+                                </pre>
+
+                                <p>2、修改表或者字段的字符集</p>
+
+                                <pre>
+                                <code>ALTER TABLE tableName MODIFY columnName varchar(512) CHARACTER SET utf8mb4;
+                                ALTER DATABASE databasename CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+                                ALTER TABLE tablename CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</code>
+                                </pre>
+
+                                <p>3、在使用JDBC<a href='http://lib.csdn.net/base/mysql' target='_blank'>数据库</a>连接时，不要自己指定<code>characterEncoding=UTF-8</code>和<code>characterSetResults=UTF-8</code>，这个会覆盖<a href='http://lib.csdn.net/base/mysql' target='_blank'>mysql</a>的默认配置。</p>

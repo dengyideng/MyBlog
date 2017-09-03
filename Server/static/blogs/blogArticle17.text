@@ -1,0 +1,90 @@
+<p>有的网站会为按钮添加点击波纹效果提升网站效果，我们可以简单实现一下：</p>
+
+                                <p>主要借助::after伪类及<a href='http://lib.csdn.net/base/css3' target='_blank'>CSS3</a>中的transform和transition属性：&nbsp;<br />
+                                html:</p>
+
+                                <pre>
+                                <code>&lt;div class=&quot;container text-center&quot;&gt;
+                                        &lt;button class=&quot;btn btn-default ripple btn-lg&quot;&gt;Button&lt;/button&gt;
+                                        &lt;button class=&quot;btn btn-default ripple btn-lg&quot;&gt;Button with very long content&lt;/button&gt;
+                                &lt;/div&gt;</code>
+                                </pre>
+
+                                <pre>
+                                <code>.ripple {
+                                    position: relative;
+                                    //隐藏溢出的径向渐变背景
+                                    overflow: hidden;
+                                }
+
+                                .ripple:after {
+                                    content: &quot;&quot;;
+                                    display: block;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    pointer-events: none;
+                                    //设置径向渐变
+                                    background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+                                    background-repeat: no-repeat;
+                                    background-position: 50%;
+                                    transform: scale(10, 10);
+                                    opacity: 0;
+                                    transition: transform .3s, opacity .5s;
+                                }
+
+                                .ripple:active:after {
+                                    transform: scale(0, 0);
+                                    opacity: .3;
+                                    //设置初始状态
+                                    transition: 0s;
+                                }</code>
+                                </pre>
+
+                                <p>参考链接：<a href='https://mladenplavsic.github.io/css-ripple-effect/#' target='_blank'>https://mladenplavsic.github.io/css-ripple-effect/#</a>&nbsp;<br />
+                                效果：&nbsp;<br />
+                                <img alt='这里写图片描述' src='/picture/picture21.jpg' /></p>
+
+                                <p>阿里的<a href='https://ant.design/components/button/' target='_blank'>Ant Design</a>按钮风格也可以以这个为模板来实现：</p>
+
+                                <pre>
+                                <code>.ripple {
+                                    position: relative;
+                                    //此处不需要设置overflow:hidden,因为after元素需要溢出显示
+                                }
+                                .ripple:focus{
+                                    outline: none;
+                                }
+
+                                .ripple:after {
+                                    content: &quot;&quot;;
+                                    display: block;
+                                    position: absolute;
+                                    //扩大伪类元素4个方向各10px
+                                    top: -10px;
+                                    left: -10px;
+                                    right: -10px;
+                                    bottom: -10px;
+                                    pointer-events: none;
+                                    background-color: #333;
+                                    background-repeat: no-repeat;
+                                    background-position: 50%;
+                                    opacity: 0;
+                                    transition: all .3s;
+                                }
+
+                                .ripple:active:after {
+                                    opacity: .3;
+                                    //设置初始状态
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    transition: 0s;
+                                 }</code></pre>
+
+                                <p>效果：</p>
+
+                                <p><img alt='这里写图片描述' src='/picture/picture22.jpg' /></p>

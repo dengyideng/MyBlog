@@ -1,0 +1,79 @@
+<h1>1.什么是Rest</h1>
+
+                                <p>rest的全称是：Representational State Transfer, 中文意思是<strong>表述状态转移</strong>。&nbsp;<br />
+                                符合<a href='http://lib.csdn.net/base/architecture' target='_blank'>架构</a>原理的前提下，理解和评估以网络为基础的应用软件的架构设计，得到一个功能性强，性能好，适宜通信的架构。<strong>REST指的是一组架构约束条件和原则</strong>。</p>
+
+                                <p>REST架构风格受web技术的影响很深 ，但是REST并不与HTTP绑定。</p>
+
+                                <h1><a name='t1'></a>2.理解RESTful</h1>
+
+                                <p>要RESTful 架构，需要理解Representational State Transfer 这个词组的意思，它的每个词都什么意思&nbsp;<br />
+                                资源与URI&nbsp;<br />
+                                统一资源接口&nbsp;<br />
+                                资源的表述&nbsp;<br />
+                                资源的链接&nbsp;<br />
+                                状态的转移</p>
+
+                                <h2><a name='t2'></a>2.1资源与URI</h2>
+
+                                <p>REST全称是表述性状态转移，那究竟指的是什么的表述？其实指的就是资源，资源可以代表任何东西：实体（手机号），抽象概念（价值）&nbsp;<br />
+                                URI：资源被识别的标识。</p>
+
+                                <pre>
+                                <code>- 用来分隔单词，例如
+                                http://www.oschina.net/news/38119/oschina-translate-reward-plan。
+
+                                / 用来表示资源的层级关系
+
+                                ? 用来过滤资源
+
+                                , ; 用来表示同级资源的关系</code></pre>
+
+
+                                <h2><a name='t3'></a>2.2统一资源接口</h2>
+
+                                <p>GET POST PUT DELETE&nbsp;<br />
+                                状态码&nbsp;<br />
+                                例如200 在各个接口中的含义：</p>
+
+                                <p>GET：已在响应中发出&nbsp;<br />
+                                POST： 如果现有资源已被更改&nbsp;<br />
+                                PUT：如果已存在资源被更改&nbsp;<br />
+                                DELETE：资源已被删除</p>
+
+                                <p>POST和PUT在资源的区别在于：<strong>所创建的资源的URI是否由客户端决定</strong></p>
+
+                                <p>客户端不一定都支持这些HTTP方法，例如比较古老的基于浏览器的客户端只支持GET和POST两种方法。</p>
+
+                                <p>统一接口是否意味着不能拓展带特殊语义的方法？&nbsp;<br />
+                                统一接口并不阻止你拓展方法，只要方法对资源的操作有着具体的，可以识别的语义即可，并能保持接口的统一性。&nbsp;<br />
+                                <strong>github的API提供了PATCH方法来进行ISSUE的更新。</strong></p>
+
+                                <pre>
+                                <code>PATCH /repos/:owner/:repo/issue/:number</code></pre>
+
+
+                                <h2><a name='t4'></a>2.3资源的表述</h2>
+
+                                <p>通过上面的HTTP方法就可以获取资源了 是不？ 不， 准确的说，客户端获取的只是资源的表述而已，资源在外界的展现形式，可以有多种，在客户端和服务器端资源的传送，也只是资源的表述而不是资源的本身。例如文本资源可以用 html， xml， json等格式，图片可以使用JPG，PNG等展示出来。&nbsp;<br />
+                                资源的表述包括和<strong>描述数据的元数据</strong>，例如，HTTP头&rsquo;Content-Type&rsquo;就是这样的元数据。&nbsp;<br />
+                                例如：一个抓包请求。</p>
+
+                                <h2><a name='t5'></a>2.4 资源的链接</h2>
+
+                                <p>我们知道REST是使用标准的HTTP方法来操作资源的，但仅仅因此就理解成带CRUD的Web<a href='http://lib.csdn.net/base/mysql' target='_blank'>数据库</a>架构就太过简单了。&nbsp;<br />
+                                <strong>超媒体：把一个个资源链起来。</strong></p>
+
+                                <h2><a name='t6'></a>2.5 状态转移</h2>
+
+                                <p>REST的无状态通信原则，（服务器不应该保存客户端的状态）</p>
+
+                                <p>2.5.1 应用状态与资源状态&nbsp;<br />
+                                实际上，状态应该分为应用状态和资源状态，客户端负责维护<strong>应用状态</strong>，而服务端维护<strong>资源状态</strong>&nbsp;<br />
+                                客户端和服务器的交互必须是无状态的，并且每次请求中包含处理该请求所需的一切信息。&nbsp;<br />
+                                服务端不需要在请求间保留应用状态，只有在接受实际请求的时候，服务端才会关注应用状态。&nbsp;<br />
+                                这种无状态通信原则，使得服务端和中介能够理解独立的请求和响应。</p>
+
+                                <p>2.5.2 应用状态的转移&nbsp;<br />
+                                状态转移到这里已经很好理解了，&ldquo;会话&rdquo;状态不是作为资源状态保存在服务端的，而是被客户端作为应用状态进行跟踪的。客户端应用状态在服务端提供的超媒体的指引下发生变迁。服务端通过超媒体告诉客户端当前状态有哪些后续状态可以进入。&nbsp;<br />
+                                这类&ldquo;下一页&rdquo;之类的链接就是这种推进状态的作用&ndash;指引你如何从当前状态进入下一可能的状态。</p>

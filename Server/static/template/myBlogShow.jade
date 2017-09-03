@@ -1,0 +1,163 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='../icon/icons/favicon.ico')
+    title MyBlog我的博客
+    link(rel='stylesheet', type='text/css', href='../css/myBlogShow_css.css')
+    link(rel='stylesheet', type='text/css', href='../icon/icons/iconfont.css')
+  body
+    #head
+      #banner
+        #left
+          p W
+        #right
+          p MyBlog
+        .navigatorBar
+          a(href='/writeBlog?loginaccount=#{params.blogger.account}')
+            i.iconfont.icon-edit
+            | 发表博文
+        .navigatorBar
+          a(href='/index?page=1&loginaccount=#{params.blogger.account}')
+            i.iconfont.icon-index
+            | 首页
+        .navigatorBar
+          a(href='/userMessage?loginaccount=#{params.blogger.account}')
+            i.iconfont.icon-message
+            | 我的信息
+    #content_container
+      .content_head_background
+      .content_left
+        .content_left_top
+          .personalMess 个人资料
+          .messageDetails
+            img(src='#{params.blogger.photo}')
+            br
+            span #{params.blogger.nickName}
+            br
+        .content_left_achievement
+          .achievement_label 我的成就
+          .myAchievement
+            dl
+              dd
+                i.iconfont.icon-views
+                | 			    			阅读数: 
+                span #{params.blogger.readCount}
+              dd
+                i.iconfont.icon-add
+                | 			    			关注数: 
+                span #{params.blogger.focusedCount}
+              dd
+                i.iconfont.icon-edit
+                | 			    			文章数: 
+                span #{params.blogger.blogsCount}
+        .content_left_footprint
+          .myFootprint 我的足迹
+          dl
+            dd
+              a.navigator(href='/myFocus?loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-add
+                span 我的关注
+            dd
+              a.navigator(href='/myCollect?loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-favorite
+                span 我的收藏
+        .content_left_middle
+          .listByCategory 文章分类
+          dl
+            dd
+              a.navigator(href='/mySpace?category=android&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-shouji
+                span 移动开发(#{params.blogger.allBlogsListByCategory.android})
+            dd
+              a.navigator(href='/mySpace?category=database&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-shujuku
+                span 数据库(#{params.blogger.allBlogsListByCategory.database})
+            dd
+              a.navigator(href='/mySpace?category=web&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-qianduan
+                span 前端(#{params.blogger.allBlogsListByCategory.web})
+            dd
+              a.navigator(href='/mySpace?category=cloud&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-yun
+                span 云计算(#{params.blogger.allBlogsListByCategory.cloud})
+            dd
+              a.navigator(href='/mySpace?category=java&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-java
+                span Java开发(#{params.blogger.allBlogsListByCategory.java})
+            dd
+              a.navigator(href='/mySpace?category=others&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-all
+                span 其他(#{params.blogger.allBlogsListByCategory.others})
+      .content_right
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          span
+            b #{params.blog.title}
+        .blog_category
+          i.iconfont.icon-category
+          |   分类: 
+          span #{params.blog.category}
+        .blog_content
+          | !{params.blog.content}
+        .blog_comments
+          .blog_comments_head
+            span 评论
+          .blog_comments_body
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[0].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[0].commentPers.account}&loginaccount=#{params.blogger.account}')
+                  span #{params.comment[0].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[0].commentText}
+              .comment_time
+                span #{params.comment[0].commentTime}
+              .clearFloat
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[1].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[1].commentPers.account}&loginaccount=#{params.blogger.account}')
+                  span #{params.comment[1].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[1].commentText}
+              .comment_time
+                span #{params.comment[1].commentTime}
+              .clearFloat
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[2].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[2].commentPers.account}&loginaccount=#{params.blogger.account}')
+                  span #{params.comment[2].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[2].commentText}
+              .comment_time
+                span #{params.comment[2].commentTime}
+              .clearFloat
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[3].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[3].commentPers.account}&loginaccount=#{params.blogger.account}')
+                  span #{params.comment[3].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[3].commentText}
+              .comment_time
+                span #{params.comment[3].commentTime}
+              .clearFloat
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[4].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[4].commentPers.account}&loginaccount=#{params.blogger.account}')
+                  span #{params.comment[4].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[4].commentText}
+              .comment_time
+                span #{params.comment[4].commentTime}
+              .clearFloat
+      .clearFloat
+    script(type='text/javascript', src='/javascript/myBlogShow_js.js')

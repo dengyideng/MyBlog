@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon"  href="../icon/icons/favicon.ico">
+	<title>MyBlog登录</title>
+	<link rel="stylesheet" type="text/css" href="../css/login_css.css">
+	<link rel="stylesheet" type="text/css" href="../icon/icons/iconfont.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="pictureAd">
+			<img src="../picture/login_picture.jpg" height="500">
+		</div>
+		<div class="loginBox">
+	        <form action="loginCheck" method="get">
+	        	<span>账号登录</span>
+			    <input type="text" name="username" value="输入用户名" class="textbox"><br>
+			    <input type="text" name="password" value="输入密码" class="textbox"><br>
+			    <input type="checkbox" name="loginOption" class="loginOption">
+			    <label>下次自动登录</label>
+			    <a href="">忘记密码?</a><br>
+			    <input type="submit" name="login" value="登录" class="login_button">
+
+	        </form>
+	        <div class="tipsRegister">
+			    <span>还没有MyBlog账号?</span>
+			    <a href="/register">立即注册</a>
+			</div>
+		</div>
+		<div class="clearFloat"></div>
+	</div>
+</body>

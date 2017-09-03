@@ -1,0 +1,271 @@
+{"comment" : [{
+	              "commentId" : 1,
+	              "commentTime" : "2017-07-01",
+	              "commentPers" : 1001,
+	              "blogId" : 1,
+	              "commentText" :"墙都不扶只服楼主"
+               },{
+               	  "commentId" : 2,
+	              "commentTime" : "2017-07-02",
+	              "commentPers" : 1002,
+	              "blogId" : 1,
+	              "commentText" :"楼主数据结构可以啊,牛批！"
+               },{
+               	  "commentId" : 3,
+	              "commentTime" : "2017-07-03",
+	              "commentPers" : 1003,	              
+	              "blogId" : 1,
+	              "commentText" :"很有用!感谢!"
+               },{
+               	  "commentId" : 4,
+	              "commentTime" : "2017-07-04",
+	              "commentPers" : 1004,	             
+	              "blogId" : 2,
+	              "commentText" :"看招聘，看要求，尝试应聘，知道自己缺啥，学啥。你这程度也会有公司要的。另外，图片轮播建议封装成jquery插件方式，这么全局的写显得有点low，别人不好意思看的"
+               },{
+               	  "commentId" : 5,
+	              "commentTime" : "2017-07-05",
+	              "commentPers" : 1005,	              
+	              "blogId" : 2,
+	              "commentText" :"自学三个月前端，能写到这样，还算不错。其实写的也没有什么程度，只是写出来了，类似于 小学语言老师常说的流水帐作文。代码中体现不出程序员应当有的一些基本编程思想，如：抽象，代码复用，组件化等等。 而且，对于一个只自学了三个月编程的人来说，学数据结构、算法、微机原理、编译原理等等软件基础课程似乎是不太可能的，所以，也很难期望在未来一段时间内会有快速的成长，也就是说，未来两三年内，发展潜力很小。最要命的是，学机械自动化的教育机构老师跑到台湾研究动物行为学转行web前端，是在毕业后两年内完 成的，天晓得再过半年，你会在做什么，仅从这一点上来讲，绝大多数IT企业都不会想要你。"
+               },{
+               	  "commentId" : 6,
+	              "commentTime" : "2017-07-06",
+	              "commentPers" : 1006,	              
+	              "blogId" : 2,
+	              "commentText" :"我在学习这些视频教程，我问题一起研究呀！"
+               },{
+               	  "commentId" : 7,
+	              "commentTime" : "2017-07-07",
+	              "commentPers" : 1007,
+	              "blogId" : 3,
+	              "commentText" :"在实际Android开发过程确实会有很多相见恨晚的工具或网站出现"
+               },{
+               	  "commentId" : 8,
+	              "commentTime" : "2017-07-08",
+	              "commentPers" : 1008,	            
+	              "blogId" : 3,
+	              "commentText" :"Android系统每次推出一些新特性，Google都会写一些Demo放在Github上，对于想要了解新特性怎么玩的同学，肯定不能错过它。"
+               },{
+               	  "commentId" : 9,
+	              "commentTime" : "2017-07-09",
+	              "commentPers" : 1009,	              
+	              "blogId" : 3,
+	              "commentText" :"如果你不知道一个Android的类怎么用，可以在Codota上面快速的找到很多不错的示例代码。"
+               },{
+               	  "commentId" : 10,
+	              "commentTime" : "2017-07-10",
+	              "commentPers" : 1010,	      
+	              "blogId" : 4,
+	              "commentText" :"你是否还在为找不到合适的开源库而苦恼，Android Arsenal这个网站已经帮你做了一定的分类，可以帮你提高不少效率。"
+               },{
+               	  "commentId" : 11,
+	              "commentTime" : "2017-07-11",
+	              "commentPers" : 1001,	     
+	              "blogId" : 4,
+	              "commentText" :"Android所有的源代码都在这里，只需找到对应想要的模块，用Git克隆下来即可。比如，我想要的framework代码。"
+               },{
+               	  "commentId" : 12,
+	              "commentTime" : "2017-07-12",
+	              "commentPers" : 1002,	   
+	              "blogId" : 4,
+	              "commentText" :"克隆Android一个模块的代码量是很多的，有时候我只想要几个类的代码怎么办？AndroidXRef这个网站可以让你单独搜索某个类，要哪几个下载哪几个即可。"
+               },{
+               	  "commentId" : 13,
+	              "commentTime" : "2017-07-13",
+	              "commentPers" : 1003,
+	              "blogId" : 5,
+	              "commentText" :"除了AndroidXRef可以查看某个类的源代码外，GrepCode同样也能做到。而且GrepCode不限于Android的源码，这里也推荐一下。"
+               },{
+               	  "commentId" : 14,
+	              "commentTime" : "2017-07-14",
+	              "commentPers" : 1004,
+	              "blogId" : 5,
+	              "commentText" :"国内Android源码分析的先驱，由滴滴的技术专家Trinea发起，坦白的讲，这个项目对我的影响很大，我也从这里开始体会源码解读的魅力的。"
+               },{
+               	  "commentId" : 15,
+	              "commentTime" : "2017-07-15",
+	              "commentPers" : 1005,
+	              "blogId" : 5,
+	              "commentText" :"老罗，罗升阳的个人博客站点，很多人看过他博客里面是如何分析Android和Chrome的源代码的。非常好的一个网站，以前功力不够没能看懂文章，经过一段时间后再回去翻看一些文章，不得不赞。"
+               },{
+               	  "commentId" : 16,
+	              "commentTime" : "2017-07-16",
+	              "commentPers" : 1006,
+	              "blogId" : 6,
+	              "commentText" :"数据库和数据仓库其实是一样的或者及其相似的，都是通过某个数据库软件，基于某种数据模型来组织、管理数据。但是，数据库通常更关注业务交易处理（OLTP），而数据仓库更关注数据分析层面（OLAP），由此产生的数据库模型上也会有很大的差异。"
+               },{
+               	  "commentId" : 17,
+	              "commentTime" : "2017-07-17",
+	              "commentPers" : 1007,
+	              "blogId" : 6,
+	              "commentText" :"数据库通常追求交易的速度，交易完整性，数据的一致性，等等，在数据库模型上主要遵从范式模型（1NF，2NF，3NF，等等），从而尽可能减少数据冗余，保证引用完整性；而数据仓库强调数据分析的效率，复杂查询的速度，数据之间的相关性分析，所以在数据库模型上，数据仓库喜欢使用多维模型，从而提高数据分析的效率。"
+               },{
+               	  "commentId" : 18,
+	              "commentTime" : "2017-07-18",
+	              "commentPers" : 1008,
+	              "blogId" : 6,
+	              "commentText" :"产品实现层面：数据库和数据仓库软件是有些不同的，数据库通常使用行式存储，如SAP ASE，Oracle, Microsoft SQL Server，而数据仓库倾向使用列式存储，如SAP IQ，SAP HANA"
+               },{
+               	  "commentId" : 19,
+	              "commentTime" : "2017-07-19",
+	              "commentPers" : 1009,
+	              "blogId" : 7,
+	              "commentText" :"oltp面对业务，一个是对业务分析"
+               },{
+               	  "commentId" : 20,
+	              "commentTime" : "2017-07-20",
+	              "commentPers" : 1010,
+	              "blogId" : 7,
+	              "commentText" :"oltp是3NF设计，olap是星形模型设计.最近一个新同事问我统计的时候为什么不能直接走ods，要做一些数据仓库的模型，我觉得很重要的一点就是生产库业务复杂，3nf的设计，一般人光理解这个业务都需要花很多时间，更别说使用了。因此需要能抽象出一个简单易懂的模型"
+               },{
+               	  "commentId" : 21,
+	              "commentTime" : "2017-07-21",
+	              "commentPers" : 1001,
+	              "blogId" : 7,
+	              "commentText" :"oltp针对当天的数据进行操作，olap针对当前和历史数据做处理"
+               },{
+               	  "commentId" : 22,
+	              "commentTime" : "2017-07-22",
+	              "commentPers" : 1002,
+	              "blogId" : 8,
+	              "commentText" :"我尝试读题，『云计算』作为本世纪互联网行业三大泡沫技术之一，被各位技术站队专家、天使投资人、传统行业大老板赋予了太多的含义，好在题主有了『阿里』和『腾讯』两个关键字，我理解对应的是『腾讯云』和『阿里云』，那我就限定本题的主旨是讨论『类似于AWS的公有云托管云台(IaaS)』，并且强调于利用云作为生产平台，而非内部系统。"
+               },{
+               	  "commentId" : 23,
+	              "commentTime" : "2017-07-23",
+	              "commentPers" : 1003,
+	              "blogId" : 8,
+	              "commentText" :"我这几年基本都在闷头写代码，对技术的关注远多过于市场。直到有一天我参加本厂的通道评审，评审官最后跟我说：我看你说得挺厉害的呀，为啥咱们腾讯云的外部口碑不如阿里云和某友商还有某友商呢？（于是没让我过）痛定思痛，我下来一看，今日的公有云市场已经火热起来，互联网上的新闻、评测、推广铺天盖地，跟三四年前我们启动腾讯云项目时已经完全不同了"
+               },{
+               	  "commentId" : 24,
+	              "commentTime" : "2017-07-24",
+	              "commentPers" : 1004,
+	              "blogId" : 8,
+	              "commentText" :"总的来说，所有的公有云厂商做的事情都是——填坑。坑有无数个，有的坑浅，只是在扁平化时不重要；有些坑深，必须要集中力量将其填起，还要在长期的运营过程中不断优化不断改近；有些坑一眼望去怎么也解决不了，那又要想办法从它旁边绕过去，最好还对用户无感知。"
+               },{
+               	  "commentId" : 25,
+	              "commentTime" : "2017-07-25",
+	              "commentPers" : 1005,
+	              "blogId" : 9,
+	              "commentText" :"运营是个苦差事，要把脏活和累活都干好，在公有云里面，还得比用户先发现脏活和累活，最好在他还没发现的时候就给干了。当技术还不成熟时（其实技术永远成熟不了），运营能力意味着一个团队直接的竞争力，这是基于踏坑无数的经验和舍我其谁的勇气。"
+               },{
+               	  "commentId" : 26,
+	              "commentTime" : "2017-07-26",
+	              "commentPers" : 1006,
+	              "blogId" : 9,
+	              "commentText" :"那么，对用户来说，公有云的意义是什么呢？是帮用户把坑填了，帮用户把运营上能简化的都简化好了。用户使用可靠的公有云就相当于站在了可靠的运营能力和实践经验上。云就是互联网的水和电，用户不用再自己购买劣质煤修建发电厂，甚至他都不用关心电厂在哪里，从此他的生命中与此相关的就只有电网公司年薪百万的抄表工了。"
+               },{
+               	  "commentId" : 27,
+	              "commentTime" : "2017-07-27",
+	              "commentPers" : 1007,
+	              "blogId" : 9,
+	              "commentText" :"用户选择公有云平台其实选择的不是Xen或KVM，更不是感冒于创始人的星座血型，而是对这个平台运营能力的信赖和对待问题的坦诚态度"
+               },{
+               	  "commentId" : 28,
+	              "commentTime" : "2017-07-28",
+	              "commentPers" : 1008,
+	              "blogId" : 10,
+	              "commentText" :"不要以编程语言来定方向,不要以编程语言来思考问题"
+               },{
+               	  "commentId" : 29,
+	              "commentTime" : "2017-07-29",
+	              "commentPers" : 1009,
+	              "blogId" : 10,
+	              "commentText" :"对一个公司对一个企业说了，你创造也多少价值的是衡量回报的指标。你对公司企业的商业模式起多大效用也是一个指标。"
+               },{
+               	  "commentId" : 30,
+	              "commentTime" : "2017-07-30",
+	              "commentPers" : 1010,
+	              "blogId" : 10,
+	              "commentText" :"对于年薪40万的程序员，不只是技术过硬，还有一个原因是他们所在的公司福利高，或者会直接持股。在BAT中就是一个很好的案例，例如阿里巴巴P7、P8级别的员工不仅是年薪30到80万不等，还有更多股票持有。"
+               },{
+               	  "commentId" : 31,
+	              "commentTime" : "2017-07-31",
+	              "commentPers" : 1001,
+	              "blogId" : 11,
+	              "commentText" :"当然现在很多互联网公司，只有在盈利的条件下才有资格谈这些年薪几十万。一个小公司，或者一个私企，刚开始起步的公司是不能做到这个地步的。举个例子，一线城市，早一个小的企业中，工资就是8K——1.5K的范围，有工作经验，加上自己的技术。也许会做到一个经理的位置，到时候可能年薪20万，或者30万不等。"
+               },{
+               	  "commentId" : 32,
+	              "commentTime" : "2017-08-01",
+	              "commentPers" : 1002,
+	              "blogId" : 11,
+	              "commentText" :"工作年限长，经验丰富:这类程序员是 Topcoder 的主力军，他们的共同特点是：10 年以上的工作经验，在大公司当过螺丝钉，也在创业公司做过技术 leader，有过一两段不算成功的创业经历。这样的程序员无论是去 BAT 还是去创业公司，都能拿到 60万年薪以上的 offer。"
+               },{
+               	  "commentId" : 33,
+	              "commentTime" : "2017-08-02",
+	              "commentPers" : 1003,
+	              "blogId" : 11,
+	              "commentText" :"硅谷回国派:从硅谷回大陆的程序员同学，轻松达成60万年薪。"
+               },{
+               	  "commentId" : 34,
+	              "commentTime" : "2017-08-03",
+	              "commentPers" : 1004,
+	              "blogId" : 12,
+	              "commentText" :"举一个例子：传说网络安全大神道哥在面试阿里的时候，面试官提出这样一个问题：你怎么证明自己的技术水平？然后道哥接过电脑，当着面试官的面关掉了阿里的内网。据说当时运维人员都傻了眼，内部引起一阵骚动。面试官赶紧把道哥签了才把问题解决了。如果技术水平牛到这种境界，没有理由会不成为 Topcoder 啊。"
+               },{
+               	  "commentId" : 35,
+	              "commentTime" : "2017-08-04",
+	              "commentPers" : 1005,
+	              "blogId" : 12,
+	              "commentText" :"对于代码而言，任何代码背后的努力比代码本身更多。有的人曾经花两年时间编写了一个软件，代码不过8000行左右，公司在他身上花费超过40万。问题是8000行的代码，背后的软件设计方案、算法推演仿真、数据分析的工作量换算成文字打印出来估计能有一人高，如果再加上试验检验，人力物力投入更大。这么多工作量，从8000行代码的工作量拿1万块钱就够了，背后的工作该拿39万。"
+               },{
+               	  "commentId" : 36,
+	              "commentTime" : "2017-08-05",
+	              "commentPers" : 1006,
+	              "blogId" : 12,
+	              "commentText" :"真正意义上的程序员如果公司给不了你年薪60万以上。但是你可以从事披着程序员外皮的其他职业，既满足了兴趣又能拿高薪。"
+               },{
+               	  "commentId" : 37,
+	              "commentTime" : "2017-08-06",
+	              "commentPers" : 1007,
+	              "blogId" : 13,
+	              "commentText" :"前篇：我觉得想着培训机构可靠不可靠的同时，最应该先考虑自身可靠不可靠，认清自己适合不适合学，最近毕业季，加上培训毕业，Java人口大增（并非人才大增）招有用的人还是一样招不到。"
+               },{
+               	  "commentId" : 38,
+	              "commentTime" : "2017-08-07",
+	              "commentPers" : 1008,
+	              "blogId" : 13,
+	              "commentText" :"所以大家别想着Java工资高就往里面挤了，这并非富士康啊，上岗培训一月，就业率百分之99.9"
+               },{
+               	  "commentId" : 39,
+	              "commentTime" : "2017-08-08",
+	              "commentPers" : 1009,
+	              "blogId" : 13,
+	              "commentText" :"工资高的前提是你能学好，学好了能就业，就业了能熬5年，才能体现高薪，然后这路上有多少人被刷下去了呢？或者坚持不下来的呢？任何一个行业都一样！我始终相信行行出状元，不要想这你那个行业一辈子都不能成事"
+               },{
+               	  "commentId" : 40,
+	              "commentTime" : "2017-08-09",
+	              "commentPers" : 1010,
+	              "blogId" : 14,
+	              "commentText" :"IT行业就是升职加薪 赢取白富美 走上人生巅峰。"
+               },{
+               	  "commentId" : 41,
+	              "commentTime" : "2017-08-10",
+	              "commentPers" : 1001,
+	              "blogId" : 14,
+	              "commentText" :"此条针对刚毕业的大学生，或者无社会经验人士，IT环境这么现实能力居上，工作还有保就业一说吗？所以你要真打算去培训机构，那么不要把机构承诺给你的保就业当成是你的后盾，不努力扎实的学，就没有所谓的技术能力，没有所谓的工作，这个在哪个行业都一样！"
+               },{
+               	  "commentId" : 42,
+	              "commentTime" : "2017-08-11",
+	              "commentPers" : 1002,
+	              "blogId" : 14,
+	              "commentText" :"自认为面试经验和写简历技巧，对你打算长期做这行，至关重要，（IT行业跳槽太正常的）不大可能几年下来一直在一家公司，所以积累这些经验对你长期发展是有利的"
+               },{
+               	  "commentId" : 43,
+	              "commentTime" : "2017-08-12",
+	              "commentPers" : 1003,
+	              "blogId" : 15,
+	              "commentText" :"学历学历学历，重要事情说三次，IT学历真的很重要"
+               },{
+               	  "commentId" : 44,
+	              "commentTime" : "2017-08-13",
+	              "commentPers" : 1004,
+	              "blogId" : 15,
+	              "commentText" :"所以说跟优秀的人在一起，自己也会优秀，跟负能量的人爱抱怨的人在一起，那么也会影响到你！"
+               },{
+               	  "commentId" : 45,
+	              "commentTime" : "2017-08-14",
+	              "commentPers" : 1005,
+	              "blogId" : 15,
+	              "commentText" :"别找太大的班，有的班有100人（一般是大机构），真的太多了，很容易注意力不集中，你要是坐最后面，真的，看这个一眼，那个瞧一瞧，老师刚才讲什么了，都不知道就都过去了而且大班很大程度上老师顾不上你的"
+               }]}

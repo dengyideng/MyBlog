@@ -1,0 +1,98 @@
+body{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.container{
+	width: 908px;
+	padding: 60px 200px 60px 200px;
+}
+
+.pictureAd{
+	float: left;
+}
+
+.loginBox{
+	width: 300px;
+	float: right;
+	border: 1px #d5dce5 solid;
+	padding: 20px;
+	font-family: Microsoft yahei;
+	color: #666;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+.loginBox>form>span{
+	display: block;
+	padding-left: 15px;
+	letter-spacing: 2px;
+	font-size: 18px;
+	line-height: 32px;
+}
+
+.loginBox>form>input.textbox{
+	line-height: 40px;
+	margin: 20px 15px 0 15px;
+	width: 246px;
+	padding-left: 20px;
+	border: 1px solid #d5dce5;
+	border-radius: 4px;
+	color: #adadad;
+	font-family: Microsoft yahei;
+	font-size: 15px;
+}
+
+.loginBox>form>input.loginOption{
+	margin: 10px 0 10px 15px;
+	height: 20px;
+}
+
+.loginBox>form>input.login_button{
+	margin: 20px 15px 20px 15px;
+	width: 266px;
+	height: 40px;
+	border: 1px solid #d5dce5;
+	border-radius: 4px;
+	font-family: Microsoft yahei;
+	font-size: 15px;
+	background-color: rgb(204, 0, 0);
+	letter-spacing: 6px;
+	color: white;
+}
+
+.loginBox>form>input.login_button:hover{
+	cursor: pointer;
+}
+
+.loginBox>form>label{
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	top: -8px;
+}
+
+.loginBox>form>a{
+	color: #666;
+	display: inline-block;
+	float: right;
+	margin: 10px 15px 10px 10px;
+}
+
+.clearFloat{
+	clear: both;
+}
+
+.tipsRegister{
+	margin: 10px 15px 20px 15px;
+}
+
+.tipsRegister>a{
+	display: inline-block;
+	float: right;
+	color: #428bca;
+	padding-right: 5px;
+}

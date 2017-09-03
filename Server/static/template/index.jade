@@ -1,0 +1,192 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='../icon/icons/favicon.ico')
+    title MyBlog首页
+    link(rel='stylesheet', type='text/css', href='../css/index_css.css')
+    link(rel='stylesheet', type='text/css', href='../icon/icons/iconfont.css')
+  body
+    #head
+      #banner
+        #left
+          p W
+        #right
+          p MyBlog
+      #navigationBar
+        #navigatorIndex.navigator
+          a(href='/index?page=1&loginaccount=#{params.login.account}') 首页
+        .navigator
+          a(href='/blogExperts?loginaccount=#{params.login.account}') 博客专家
+        .navigator
+          a(href='/mySpace?loginaccount=#{params.login.account}') 我的博客
+        .login
+          a.notNavigator(href='/login') 登录
+        .register
+          a.notNavigator(href='/register') 注册
+        .welcome
+          | 欢迎您,
+          span(data='#{params.login.account}') #{params.login.nickName}
+        .search
+          input#search_text(type='text', name='search_text')
+          a(href='/search')
+            i.iconfont.icon-search
+    #content
+      #blogArticleFirst.blogArticle
+        .bloggerMessage
+          a(href='/blogsShow?account=#{params.blogs[0].account}&loginaccount=#{params.login.account}')
+            img.photo(src='#{params.blogs[0].photo}')
+          a.nickName(href='/blogsShow?account=#{params.blogs[0].account}&loginaccount=#{params.login.account}') #{params.blogs[0].nickName}
+        .blogDetails
+          .title
+            h3
+              a.notNavigator(href='/blogsShow?blogid=#{params.blogs[0].blogId}&loginaccount=#{params.login.account}') #{params.blogs[0].title}
+          .blogContent
+            p 
+              |  !{params.blogs[0].content}
+          .category
+            .icon
+              i.iconfont.icon-category.userDefined
+            .categoryLabel
+              a.notNavigator #{params.blogs[0].category}
+          .views
+            .viewsTime
+              p #{params.blogs[0].views}
+            .viewsIcon
+              i.iconfont.icon-views.userDefined
+            .createTime
+              p #{params.blogs[0].createTime}
+      .blogArticle
+        .bloggerMessage
+          a(href='/blogsShow?account=#{params.blogs[1].account}&loginaccount=#{params.login.account}')
+            img.photo(src='#{params.blogs[1].photo}')
+          a.nickName(href='/blogsShow?account=#{params.blogs[1].account}&loginaccount=#{params.login.account}') #{params.blogs[1].nickName}
+        .blogDetails
+          .title
+            h3
+              a.notNavigator(href='/blogsShow?blogid=#{params.blogs[1].blogId}&loginaccount=#{params.login.account}') #{params.blogs[1].title}
+          .blogContent
+            p
+              | !{params.blogs[1].content}
+          .category
+            .icon
+              i.iconfont.icon-category.userDefined
+            .categoryLabel
+              a.notNavigator #{params.blogs[1].category}
+          .views
+            .viewsTime
+              p #{params.blogs[1].views}
+            .viewsIcon
+              i.iconfont.icon-views.userDefined
+            .createTime
+              p #{params.blogs[1].createTime}
+      .blogArticle
+        .bloggerMessage
+          a(href='/blogsShow?account=#{params.blogs[2].account}&loginaccount=#{params.login.account}')
+            img.photo(src='#{params.blogs[2].photo}')
+          a.nickName(href='/blogsShow?account=#{params.blogs[2].account}&loginaccount=#{params.login.account}') #{params.blogs[2].nickName}
+        .blogDetails
+          .title
+            h3
+              a.notNavigator(href='/blogsShow?blogid=#{params.blogs[2].blogId}&loginaccount=#{params.login.account}') #{params.blogs[2].title}
+          .blogContent
+            p
+              | !{params.blogs[2].content}
+          .category
+            .icon
+              i.iconfont.icon-category.userDefined
+            .categoryLabel
+              a.notNavigator #{params.blogs[2].category}
+          .views
+            .viewsTime
+              p #{params.blogs[2].views}
+            .viewsIcon
+              i.iconfont.icon-views.userDefined
+            .createTime
+              p #{params.blogs[2].createTime}
+      .blogArticle
+        .bloggerMessage
+          a(href='/blogsShow?account=#{params.blogs[3].account}&loginaccount=#{params.login.account}')
+            img.photo(src='#{params.blogs[3].photo}')
+          a.nickName(href='/blogsShow?account=#{params.blogs[3].account}&loginaccount=#{params.login.account}') #{params.blogs[3].nickName}
+        .blogDetails
+          .title
+            h3
+              a.notNavigator(href='/blogsShow?blogid=#{params.blogs[3].blogId}&loginaccount=#{params.login.account}') #{params.blogs[3].title}
+          .blogContent
+            p
+              | !{params.blogs[3].content}
+          .category
+            .icon
+              i.iconfont.icon-category.userDefined
+            .categoryLabel
+              a.notNavigator #{params.blogs[3].category}
+          .views
+            .viewsTime
+              p #{params.blogs[3].views}
+            .viewsIcon
+              i.iconfont.icon-views.userDefined
+            .createTime
+              p #{params.blogs[3].createTime}
+      #blogArticleLast.blogArticle
+        .bloggerMessage
+          a(href='/blogsShow?account=#{params.blogs[4].account}&loginaccount=#{params.login.account}')
+            img.photo(src='#{params.blogs[4].photo}')
+          a.nickName(href='/blogsShow?account=#{params.blogs[4].account}&loginaccount=#{params.login.account}') #{params.blogs[4].nickName}
+        .blogDetails
+          .title
+            h3
+              a.notNavigator(href='/blogsShow?blogid=#{params.blogs[4].blogId}&loginaccount=#{params.login.account}') #{params.blogs[4].title}
+          .blogContent
+            p
+              | !{params.blogs[4].content}
+          .category
+            .icon
+              i.iconfont.icon-category.userDefined
+            .categoryLabel
+              a.notNavigator #{params.blogs[4].category}
+          .views
+            .viewsTime
+              p #{params.blogs[4].views}
+            .viewsIcon
+              i.iconfont.icon-views.userDefined
+            .createTime
+              p #{params.blogs[4].createTime}
+      .page_turning
+        span #{params.count}条
+        span(data='#{params.pageCount}') 共#{params.pageCount}页
+        a(href='', data='') 上一页
+        a(href='', data='') ...
+        a#indexFirst(href='', data='#{params.chooseIndex[0]}') #{params.pages[0]}
+        a#indexSecond(href='', data='#{params.chooseIndex[1]}') #{params.pages[1]}
+        a#indexLast(href='', data='#{params.chooseIndex[2]}') #{params.pages[2]}
+        a(href='', data='') ...
+        a(href='', data='') 下一页
+      .navigatorList
+        .navigatorList_title
+          h3 博文分类
+        .navigatorList_item
+          a.notNavigator(href='/differentBlogs?category=android&loginaccount=#{params.login.account}')
+            i.iconfont.icon-shouji
+            span 移动开发
+        .navigatorList_item
+          a.notNavigator(href='/differentBlogs?category=database&loginaccount=#{params.login.account}')
+            i.iconfont.icon-shujuku
+            span 数据库
+        .navigatorList_item
+          a.notNavigator(href='/differentBlogs?category=web&loginaccount=#{params.login.account}')
+            i.iconfont.icon-qianduan
+            span 前端
+        .navigatorList_item
+          a.notNavigator(href='/differentBlogs?category=cloud&loginaccount=#{params.login.account}')
+            i.iconfont.icon-yun
+            span 云计算
+        .navigatorList_item
+          a.notNavigator(href='/differentBlogs?category=java&loginaccount=#{params.login.account}')
+            i.iconfont.icon-java
+            span Java开发
+        .navigatorList_item.navigatorList_item_last
+          a.notNavigator(href='/differentBlogs?category=others&loginaccount=#{params.login.account}')
+            i.iconfont.icon-all
+            span 其他
+    script(type='text/javascript', src='/javascript/index_js.js')

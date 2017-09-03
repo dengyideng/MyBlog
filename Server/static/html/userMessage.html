@@ -1,0 +1,174 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon"  href="../icon/icons/favicon.ico">
+	<title>MyBlog个人信息</title>
+	<link rel="stylesheet" type="text/css" href="../tools/assets/css/app.css">
+	<link rel="stylesheet" type="text/css" href="../tools/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="../css/userMessage_css.css">
+	<link rel="stylesheet" type="text/css" href="../icon/icons/iconfont.css">
+	<script type="text/javascript" src="../tools/regionPicker/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../tools/regionPicker/js/jquery.cxselect.min.js"></script>
+	<script type="text/javascript" src="../tools/assets/js/amazeui.min.js"></script>
+</head>
+
+<body>
+	<div id="head">
+		<div id="banner">
+			<div id="left"><p>W</p></div>
+			<div id="right"><p>我的MyBlog</p></div>
+			<div class="options">
+			    <a href="">
+					<i class="iconfont icon-index"></i>
+				    <span>首页</span>
+				</a>
+				<a href="">
+					<i class="iconfont icon-space"></i>
+				    <span>我的空间</span>
+				</a>
+				<a href="">
+					<i class="iconfont icon-edit"></i>
+				    <span>发表文章</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="body">
+		<div class="user_message">
+			<div class="photo">
+				<img src="../picture/picture100.jpg">
+			</div>
+			<div class="nickName">
+				梅菲斯
+			</div>
+			<div class="photoUpload">
+			    <span><i class="iconfont icon-close"></i></span>
+			    <form enctype="multipart/form-data" action="photoUpload">
+				    <input type="file" name="image">
+				    <input type="submit" id="uploadSub" value="submit">
+			    </form>
+		    </div>
+		</div>
+
+		<div class="message_details">
+		    <span class="edit">
+		    	<i class="iconfont icon-edit"></i>编辑
+		    </span>
+		    <div class="clearFloat"></div>
+			<dl>
+				<dd>
+				    <i class="iconfont icon-nickname label"></i>
+					昵称&nbsp;:&nbsp;<span>梅菲斯</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-real_name label"></i>
+					实名&nbsp;:&nbsp;<span>王家松</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-accountlogin label"></i>
+					账号&nbsp;:&nbsp;<span>1001</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-icon02 label"></i>
+					密码&nbsp;:&nbsp;<span>1234567</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-career label"></i>
+					职位&nbsp;:&nbsp;<span>学生</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-sex1-copy label"></i>
+					性别&nbsp;:&nbsp;<span>男</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-Vtubiao- label"></i>
+					生日&nbsp;:&nbsp;<span>1996-06-06</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-job label"></i>
+					行业&nbsp;:&nbsp;<span>计算机软件前端工程师</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-location label"></i>
+					地区&nbsp;:&nbsp;<span>中国安徽省定远县</span>
+				</dd>
+				<dd>
+				    <i class="iconfont icon-briefintroduction label"></i>
+					简述&nbsp;:&nbsp;<span>武汉理工学子一枚</span>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="clearFloat"></div>
+	</div>
+
+	<div class="model_container">
+		<div class="model">
+			<div class="edit_label">
+				<span>编辑信息<i class="iconfont icon-close"></i></span>
+			</div>
+			<div class="user_message_form">
+				<form action="/messageChange?loginaccount=1001" method="post">
+					<dl>
+						<dd>
+							<span class="message_label">昵称&nbsp;:</span>
+							<input type="text" name="nickname" value="">
+							<span class="message_label">实名&nbsp;:</span>
+							<input type="text" name="realname" value="">
+						</dd>
+						<dd>
+							<span class="message_label">职位&nbsp;:</span>
+							<input type="text" name="career" value="">
+							<span class="message_label" data=''>性别&nbsp;:</span>
+							<input type="radio" name="sex" class="sex">男
+							<input type="radio" name="sex" class="sex">女
+						</dd>
+						<dd>
+							<span class="message_label">生日&nbsp;:</span>
+							<input type="text" name="birthday" class="birthday" data-am-datepicker value="">
+							<span class="message_label">行业&nbsp;:</span>
+							<select>
+							    <option value="0">请选择行业</option>
+								<option value="1">电子·微电子</option>
+								<option value="2">计算机科学与技术</option>
+								<option value="3">批发零售</option>
+								<option value="4">贸易·进出口</option>
+								<option value="5">房地产·建筑与工程</option>
+								<option value="6">娱乐·运动·休闲</option>
+								<option value="7">交通·运输·物流</option>
+								<option value="8">制药·生物工程</option>
+								<option value="9">互联网·电子商务</option>
+								<option value="10">其他</option>
+							</select>
+						</dd>
+						<dd class="region" id="element_id">
+							<span class="message_label">地区&nbsp;:</span>
+							<select class="province"></select>
+							<select class="city"></select>
+							<select class="area"></select>
+						</dd>
+						<dd>
+							<span>简述&nbsp;:</span>
+							<textarea name="introduction" class="introduction"></textarea>
+						</dd>
+					</dl>
+				</form>
+			</div>
+			<div class="submit">
+				<input type="submit" name="submit" value="保存">
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+    	$.cxSelect.defaults.url = "../tools/regionPicker/js/cityData.min.json";
+    	$.cxSelect.defaults.nodata = 'none';
+
+    	$('#element_id').cxSelect({
+    		selects : ['province', 'city', 'area']
+    	});
+    </script>
+
+    <script type="text/javascript" src="../javascript/userMessage_js.js"></script>
+</body>

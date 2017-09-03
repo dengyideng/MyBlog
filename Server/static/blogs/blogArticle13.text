@@ -1,0 +1,99 @@
+<p>最近需要在Centos7下安装下<a href='http://lib.csdn.net/base/mysql' target='_blank'>MySQL</a>，直接yum -y install的方法不太好使，就在官网下载了所有的依赖和离线安装包，安装成功，现在记录下流程：&nbsp;<br />
+                                首先进入<a href='http://lib.csdn.net/base/mysql' target='_blank'>mysql</a>官网的下载地址：&nbsp;<br />
+                                    <a href='https://dev.mysql.com/downloads/mysql/' target='_blank'>https://dev.mysql.com/downloads/mysql/</a>，然后在下载里面把os选择为Red Hat Enterprise&nbsp;<a href='http://lib.csdn.net/base/linux' target='_blank'>Linux</a>&nbsp;7 /<a href='http://lib.csdn.net/base/oracle' target='_blank'>Oracle</a>&nbsp;<a href='http://lib.csdn.net/base/linux' target='_blank'>linux</a>&nbsp;7 ，把os的版本选择为all。&nbsp;<br />
+                                    <img alt='这里写图片描述' src='http://img.blog.csdn.net/20170820103953052?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGlhbmd4aWFuZ2hlaGU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast' /><br />
+                                在下方的下载链接找到以下文件：</p>
+
+                                <pre>
+                                <code>mysql-community-client-5.7.19-1.el7.x86_64.rpm
+                                mysql-community-common-5.7.19-1.el7.x86_64.rpm
+                                mysql-community-devel-5.7.19-1.el7.x86_64.rpm
+                                mysql-community-libs-5.7.19-1.el7.x86_64.rpm
+                                mysql-community-libs-compat-5.7.19-1.el7.x86_64.rpm
+                                mysql-community-server-5.7.19-1.el7.x86_64.rpm</code>
+                                </pre>
+
+                                <p>&nbsp;</p>
+
+                                <p>因为我是Centos7 64位版本，所以选择了以上文件，如果你主机是Centos6 或者是32位版本，请找到对应版本文件，然后把六个文件下载齐全。&nbsp;<br />
+                                接下来依次按以下命令按顺序安装这些文件：</p>
+
+                                <pre>
+                                <code>rpm -ivh mysql-community-common-5.7.19-1.el7.x86_64.rpm 
+                                rpm -ivh mysql-community-libs-5.7.19-1.el7.x86_64.rpm 
+                                rpm -ivh mysql-community-devel-5.7.19-1.el7.x86_64.rpm
+                                rpm -ivh mysql-community-libs-compat-5.7.19-1.el7.x86_64.rpm
+                                rpm -ivh mysql-community-client-5.7.19-1.el7.x86_64.rpm
+                                rpm -ivh mysql-community-server-5.7.19-1.el7.x86_64.rpm</code>
+                                </pre>
+
+                                <p>&nbsp;</p>
+
+                                <p>至此，mysql5.7所有文件安装完毕，接下来就是开启服务<a href='http://lib.csdn.net/base/softwaretest' target='_blank'>测试</a>了。&nbsp;<br />
+                                1.首先关闭mysql服务：</p>
+
+                                <pre>
+                                <code>service mysqld stop</code></pre>
+
+                                <p>&nbsp;</p>
+
+                                <p>2.然后修改配置文件：</p>
+
+                                <pre>
+                                <code>vim /etc/my.cnf</code>
+                                </pre>
+
+                                <p>&nbsp;</p>
+
+                                <p>3.接下来加入一句代码即可空密码登录mysql：</p>
+
+                                <pre>
+                                <code># Disabling symbolic-links is recommended to prevent assorted security risks
+                                skip-grant-tables     #添加这句话，这时候登入mysql就不需要密码
+                                symbolic-links=0</code>
+                                </pre>
+
+                                <p>&nbsp;</p>
+
+                                <p>4.开启mysql服务：</p>
+
+                                <pre>
+                                <code>service mysqld start</code>
+                                </pre>
+
+                                <p>&nbsp;</p>
+
+                                <p>5.空密码登录mysql：</p>
+
+                                <pre>
+                                <code>mysql -u root -p    #输入命令回车进入，出现输入密码提示直接回车</code>
+                                </pre>
+
+                                <p>&nbsp;</p>
+
+                                <p>6.设置mysql密码：</p>
+
+                                <pre>
+                                <code>mysql&gt; set password for root@localhost = password(&#39;123456&#39;);
+                                ERROR 1290 (HY000): The MySQL server is running with the --skip-grant-tables option so it cannot execute this statement
+                                mysql&gt; flush privileges;  #更新权限
+                                Query OK, 0 rows affected (0.00 sec)
+                                mysql&gt; set password for root@localhost = password(&#39;123456&#39;); or update user set authentication_string=PASSWORD(&quot;123456&quot;) where user=&quot;root&quot;;
+                                Query OK, 0 rows affected, 1 warning (0.00 sec)
+                                mysql&gt;flush privileges; #更新权限
+                                mysql&gt;quit; #退出
+                                service mysqld stop # 停止mysql服务, 恢复mysql配置
+                                vim /etc/my.cnf     #修改配置文件
+                                # Disabling symbolic-links is recommended to prevent assorted security risks
+                                # skip-grant-tables # 注释掉这句话
+                                symbolic-links=0
+                                service mysqld start # 启动mysql服务
+                                mysql -uroot -p # 输入新密码登录</code>
+                                </pre>
+
+                                <p>&nbsp;</p>
+
+                                <p>7.设置mysql开机自启：</p>
+
+                                <pre>
+                                <code>systemctl enable mysqld</code></pre>

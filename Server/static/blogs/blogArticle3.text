@@ -1,0 +1,11 @@
+<p>1.Handler的作用就是用来解决子线程中无法反问UI的矛盾的，因为UI控件不是线程安全的</ p>
+
+                                <p>2.由3个角色组成来处理消息Message：消息处理者Handler、消息队列MessageQueue（其实内部是链表）、循环执行者Looper</p>
+
+                                <p>3.可以通过handler的send方法发送消息，它会使MessageQueue调用enqueueMessage的方法将消息放进队列里，然后用next方法读取出数据（读取操作附带删除操作），然后在handleMessage里处理；或者用handler的post方法投递一个Runnable到内部的Looper中去处理，执行的逻辑定义在Runnable里，这种方式的意义就是，创建一个Handler的实例，但是不需要创建它的子类，也就是说不需要去重写父类的handleMessage方法</p>
+
+                                <p>4.Handler需要线程有Looper才能创建，而线程的Looper是通过一个ThreadLocal的数据储存类来实现获取的</p>
+
+                                <p>5.Looper使用prepare方法创建，用loop方法开启消息循环；获取主线程的Looper：getMainLooper，在子线程中，要使用Looper的quit方法执行终止消息循环</p>
+
+                                <p>Handler的处理过程：用handler的send的方法发送一条消息，调用MessageQueue的enqueueMessage方法往队列里放进一条消息，Looper使用loop方法调用MessageQueue的next方法进行消息读取，将消息返回给Looper去处理，Looper最终将消息交由Handler来处理，即调用dispatchMessage的方法</p>

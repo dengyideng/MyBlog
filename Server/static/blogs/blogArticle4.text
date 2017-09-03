@@ -1,0 +1,111 @@
+<p>主线程的作用是运行四大组件：活动、服务、广播、内容提供器，以及它们和用户的交互，子线程主要是执行耗时操作，子线程也叫做工作线程</p>
+
+                                <p>1.AsyncTask：</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>AsyncTask是方便开发者在子线程中更新UI，内部是封装了线程池和Handler</p>
+
+                                <p>AsyncTask是一个抽象的泛型类，它的三个参数，第一个是传递参数，第二个是进度的显示数据类型，第三个是后台任务执行完后传递给结果处理方法的；在不需要某个参数时使用Void类来代替。</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>五个方法：</p>
+
+                                <p>onPreExecute，在异步任务执行前执行，一般用于做一些准备工作</p>
+
+                                <p>doInBackground方法是在线程池里执行的，通过publishProgress方法来发布进度消息给监听进度的方法</p>
+
+                                <p>onProgressUpdate接受到publishProgress传递过来的进度后，在主线程里执行UI的更新</p>
+
+                                <p>onPostExecute监听doInBackground方法执行完结束，并接受结果，然后在主线程对结果进行处理</p>
+
+                                <p>onCancelled取消异步任务</p>
+
+                                <p>用AsyncTask子类的实例的execute来执行异步，在执行完任务后就会关闭AsyncTask</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>注意事项：</p>
+
+                                <p>AsyncTask的对象必须要在主线程中创建，这点很重要</p>
+
+                                <p>Execute方法必须在UI线程调用</p>
+
+                                <p>除了onCancelled方法，其他方法不要主动调用</p>
+
+                                <p>一个AsyncTask对象只能执行一次，execute只能调用一次</p>
+
+                                <p>AsyncTask是主要异步操作是执行在线程池里，一个AsyncTask执行线程池里的一个线程，这个线程池默认是串型的，也就是说，当有多个AsyncTask时，它们会一个个执行，不会并发执行；可以使用executeOnExecuter来代替execute方法，然后传递多一个指定的参数进去来让其进行并发操作</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>2.IntentService：</p>
+
+                                <p>IntentService是可以更方便地执行后台任务，内部是采用HandlerThread来执行任务，单独地开启线程来执行后台任务容易被系统杀死，而放在服务里就不容易，这是IntentService的优点</p>
+
+                                <p>HandlerThread是一个内部创建了消息循环的线程；在不需要时要quit结束它，因为它内部是一个无限循环</p>
+
+                                <p>IntentService在执行完任务后会自动的停止，比较适合执行一些高优先级的后台任务；在实现上，IntentService封装了HandlerThread和Handler</p>
+
+                                <p>IntentService也是顺序地执行后台任务的，当有多个IntentService时，会按照外界发起的顺序排队执行任务</p>
+
+                                <p>继承自IntentService后要重写onHandleIntent方法</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>3.线程池：</p>
+
+                                <p>线程池地3大优点：</p>
+
+                                <p>重用线程池中的线程，避免创建销毁带来的开销，即节约开销；</p>
+
+                                <p>有效控制线程的最大并发数，避免量线程之间互抢资源导致阻塞，即控制并发访问资源；</p>
+
+                                <p>管理，并提供定时执行以及执行间隔循环执行，即执行管理；</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>ThreadPoolExecutor用来创建、初始化线程，需要指定几个参数来指定要创建的线程池的属性：</p>
+
+                                <p>corePoolSize，核心线程的数量，核心线程池默认是一直存活的，可以通过设置allowCoreThreadTimeOut为true来根据keepAliveTime所设置的时间来回收核心线程</p>
+
+                                <p>maximumPoolSize，最大线程池，达到这个值以后，后续的新线程会被阻塞</p>
+
+                                <p>keepAliveTime，一般情况下只用来指定非核心线程的闲置时间</p>
+
+                                <p>unit，用于指定keepAliveTime的时间单位</p>
+
+                                <p>workQueue，任务队列</p>
+
+                                <p>threadFactory，线程工厂，为线程池提供创建新线程的功能</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>ThreadPoolExecutor的执行过程如下：</p>
+
+                                <p>如果线程的数量没有达到核心线程的数量，就创建核心线程</p>
+
+                                <p>如果线程的数量达到了核心线程的数量，就会将任务放进任务队列中等待执行</p>
+
+                                <p>如果线程的数量达到了核心线程的数量，并且任务队列也满了，就会创建一个非核心线程来执行任务</p>
+
+                                <p>如果线程的数量达到了核心线程的数量，并且任务队列满了，并且非核心数量加上核心数量已经超过指定的最大线程数，就会拒绝任务</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>通过配置ThreadPoolExecutor可以实现很多特定的线程池，而Android中有4类常用的线程池，它们也是通过配置TPE来实现的：</p>
+
+                                <p>FixedThreadPool，fixed的意思是固定的，也就是说是一个线程数量固定的线程池，而固定也就意味着它的线程都是核心线程，它们都不会被回收，没有超时机制</p>
+
+                                <p>CachedThreadPool，缓存线程池，它和上一个完全相反，它只有非核心线程，它的数量可以任意大，有超时机制，这类线程池适合执行大量的耗时比较少的任务，当所有线程的任务执行完后，它几乎是不占用任何系统资源的，因为超时之后没有线程了</p>
+
+                                <p>ScheduledThreadPool，规划线程池，它是有固定的核心线程，数量不限的非核心线程，适合执行定时任务和具有固定周期的重复任务</p>
+
+                                <p>SingleThreadExecutor，单核线程池，它只有一个核心线程，也就是说，所有的任务都要这个线程来处理，这样可以保证任务的按顺序执行，适合必须要顺序执行的任务</p>
+
+                                <p>上面4中方法的创建：ExecutorService xxx = Executors.new+上述线程池名称（需要的数量参数）; 然后xxx.execute（没有调用开始方法的任务Runnable/Thread实例和必要的配置参数）来使用</p>

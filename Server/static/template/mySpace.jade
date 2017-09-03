@@ -1,0 +1,134 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='../icon/icons/favicon.ico')
+    title MyBlog我的空间
+    link(rel='stylesheet', type='text/css', href='../css/mySpace_css.css')
+    link(rel='stylesheet', type='text/css', href='../icon/icons/iconfont.css')
+  body
+    #head
+      #banner
+        #left
+          p W
+        #right
+          p MyBlog
+        .navigatorBar
+          a(href='/writeBlog?loginaccount=#{params.blogger.account}')
+            i.iconfont.icon-edit
+            | 发表博文
+        .navigatorBar
+          a(href='/index?page=1&loginaccount=#{params.blogger.account}')
+            i.iconfont.icon-index
+            | 首页
+        .navigatorBar
+          a(href='/userMessage?loginaccount=#{params.blogger.account}')
+            i.iconfont.icon-message
+            | 我的信息
+    #content_container
+      .content_head_background
+      .content_left
+        .content_left_top
+          .personalMess 个人资料
+          .messageDetails
+            img(src='#{params.blogger.photo}')
+            br
+            span #{params.blogger.nickName}
+            br
+        .content_left_achievement
+          .achievement_label 我的成就
+          .myAchievement
+            dl
+              dd
+                i.iconfont.icon-views
+                | 			    			阅读数: 
+                span #{params.blogger.readCount}
+              dd
+                i.iconfont.icon-add
+                | 			    			关注数: 
+                span #{params.blogger.focusedCount}
+              dd
+                i.iconfont.icon-edit
+                | 			    			文章数: 
+                span #{params.blogger.blogsCount}
+        .content_left_footprint
+          .myFootprint 我的足迹
+          dl
+            dd
+              a.navigator(href='/myFocus?loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-add
+                span 我的关注
+            dd
+              a.navigator(href='/myCollect?loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-favorite
+                span 我的收藏
+        .content_left_middle
+          .listByCategory 文章分类
+          dl
+            dd
+              a.navigator(href='/mySpace?category=android&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-shouji
+                span 移动开发(#{params.blogger.allBlogsListByCategory.android})
+            dd
+              a.navigator(href='/mySpace?category=database&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-shujuku
+                span 数据库(#{params.blogger.allBlogsListByCategory.database})
+            dd
+              a.navigator(href='/mySpace?category=web&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-qianduan
+                span 前端(#{params.blogger.allBlogsListByCategory.web})
+            dd
+              a.navigator(href='/mySpace?category=cloud&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-yun
+                span 云计算(#{params.blogger.allBlogsListByCategory.cloud})
+            dd
+              a.navigator(href='/mySpace?category=java&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-java
+                span Java开发(#{params.blogger.allBlogsListByCategory.java})
+            dd
+              a.navigator(href='/mySpace?category=others&loginaccount=#{params.blogger.account}')
+                i.iconfont.icon-all
+                span 其他(#{params.blogger.allBlogsListByCategory.others})
+      .content_right
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[0].blogId}')
+            b #{params.blogs[0].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[1].blogId}')
+            b #{params.blogs[1].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[2].blogId}')
+            b #{params.blogs[2].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[3].blogId}')
+            b #{params.blogs[3].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[4].blogId}')
+            b #{params.blogs[4].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[5].blogId}')
+            b #{params.blogs[5].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[6].blogId}')
+            b #{params.blogs[6].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[7].blogId}')
+            b #{params.blogs[7].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[8].blogId}')
+            b #{params.blogs[8].title}
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          a(href='/mySpace?blogid=#{params.blogs[9].blogId}')
+            b #{params.blogs[9].title}
+      .clearFloat
+    script(type='text/javascript', src='/javascript/mySpace_js.js')

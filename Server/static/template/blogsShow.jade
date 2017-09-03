@@ -1,0 +1,152 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='../icon/icons/favicon.ico')
+    title MyBlog博文展示
+    link(rel='stylesheet', type='text/css', href='../css/blogsShow_css.css')
+    link(rel='stylesheet', type='text/css', href='../icon/icons/iconfont.css')
+  body
+    #head
+      #banner
+        #left
+          p W
+        #right
+          p MyBlog
+        .index
+          i.iconfont.icon-index
+          a(href='/index?page=1&loginaccount=#{params.login.account}') 回到首页
+    #content_container
+      .content_head_background
+      .content_left
+        .content_left_top
+          .personalMess 个人资料
+          .messageDetails
+            img(src='#{params.blogger.photo}')
+            br
+            span #{params.blogger.nickName}
+            br
+            a.focusHim(href='/addFocus?loginaccount=#{params.login.account}&blogid=#{params.blog.blogId}&requestPage=blogsShow&focusAccount=#{params.blogger.account}', statuscode='#{params.statusCode}')
+              i.iconfont.icon-add.userDefined
+              span 关注
+        .content_left_achievement
+          .achievement_label 个人成就
+          .myAchievement
+            dl
+              dd
+                i.iconfont.icon-views
+                | 			    			阅读数: 
+                span #{params.blogger.readCount}
+              dd
+                i.iconfont.icon-add
+                | 			    			关注数: 
+                span #{params.blogger.focusedCount}
+              dd
+                i.iconfont.icon-edit
+                | 			    			文章数: 
+                span #{params.blogger.blogsCount}
+        .content_left_middle
+          .listByCategory 文章分类
+          dl
+            dd
+              a.navigator(href='/blogsShow?category=android&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-shouji
+                span 移动开发(#{params.blogger.allBlogsListByCategory.android})
+            dd
+              a.navigator(href='/blogsShow?category=database&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-shujuku
+                span 数据库(#{params.blogger.allBlogsListByCategory.database})
+            dd
+              a.navigator(href='/blogsShow?category=web&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-qianduan
+                span 前端(#{params.blogger.allBlogsListByCategory.web})
+            dd
+              a.navigator(href='/blogsShow?category=cloud&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-yun
+                span 云计算(#{params.blogger.allBlogsListByCategory.cloud})
+            dd
+              a.navigator(href='/blogsShow?category=java&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-java
+                span Java开发(#{params.blogger.allBlogsListByCategory.java})
+            dd
+              a.navigator(href='/blogsShow?category=others&account=#{params.blogger.account}&loginaccount=#{params.login.account}')
+                i.iconfont.icon-all
+                span 其他(#{params.blogger.allBlogsListByCategory.others})
+      .content_right
+        .blog_title
+          i.iconfont.icon-yuanchuang
+          span
+            b #{params.blog.title}
+        .blog_category
+          i.iconfont.icon-category
+          |   分类: 
+          span #{params.blog.category}
+          a(href='')
+            i.iconfont.icon-favorite
+            | 添加收藏
+        .blog_content
+          | !{params.blog.content}
+        .blog_comments
+          .blog_comments_head
+            span 评论
+            a(href='')
+              i.iconfont.icon-comments
+              | 添加评论
+          .blog_comments_body
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[0].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[0].commentPers.account}&loginaccount=#{params.login.account}')
+                  span #{params.comment[0].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[0].commentText}
+              .comment_time
+                span #{params.comment[0].commentTime}
+              .clearFloat
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[1].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[1].commentPers.account}&loginaccount=#{params.login.account}')
+                  span #{params.comment[1].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[1].commentText}
+              .comment_time
+                span #{params.comment[1].commentTime}
+              .clearFloat
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[2].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[2].commentPers.account}&loginaccount=#{params.login.account}')
+                  span #{params.comment[2].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[2].commentText}
+              .comment_time
+                span #{params.comment[2].commentTime}
+              .clearFloat
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[3].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[3].commentPers.account}&loginaccount=#{params.login.account}')
+                  span #{params.comment[3].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[3].commentText}
+              .comment_time
+                span #{params.comment[3].commentTime}
+              .clearFloat
+            .comment
+              .commentPers_message
+                img(src='#{params.comment[4].commentPers.photo}')
+                a(href='/blogsShow?account=#{params.comment[4].commentPers.account}&loginaccount=#{params.login.account}')
+                  span #{params.comment[4].commentPers.nickName}
+              .comment_content
+                div
+                  | #{params.comment[4].commentText}
+              .comment_time
+                span #{params.comment[4].commentTime}
+              .clearFloat
+      .clearFloat
+  script(type='text/javascript', src='/javascript/blogsShow_js.js')

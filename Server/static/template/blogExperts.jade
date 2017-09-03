@@ -1,0 +1,214 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='../icon/icons/favicon.ico')
+    title MyBlog博客专家
+    link(rel='stylesheet', type='text/css', href='../css/blogExperts_css.css')
+    link(rel='stylesheet', type='text/css', href='../icon/icons/iconfont.css')
+  body
+    #head
+      #banner
+        #left
+          p W
+        #right
+          p MyBlog
+      #navigationBar
+        #navigatorIndex.navigator
+          a(href='/index?page=1&loginaccount=#{params.login.account}') 首页
+        #navigatorBlogExperts.navigator
+          a(href='/blogExperts?loginaccount=#{params.login.account}') 博客专家
+        #navigatorMyBlog.navigator
+          a(href='/mySpace?loginaccount=#{params.login.account}') 我的博客
+        .login
+          a.notNavigator(href='/login') 登录
+        .register
+          a.notNavigator(href='/register') 注册
+        .welcome
+          | 欢迎您,
+          span(data='#{params.login.account}') #{params.login.nickName}
+      .expert_banner
+        .expert_banner_c
+          p.experts_intro
+            | 是My Blog给予质量较高、影响力较大的技术类博客的荣誉称号，代表了My Blog官方
+            | 对其博客的肯定。
+          h4 博客专家特权
+          ul.blogExperts_privilege
+            li
+              i.iconfont.icon-privilege.userDefined
+              b 博客专家勋章：
+              span 易于被辨识，获得更多的关注
+            li
+              i.iconfont.icon-privilege.userDefined
+              b 优先推荐：
+              span 你的文章会被优先推荐，获得更多的曝光
+            li
+              i.iconfont.icon-privilege.userDefined
+              b 线下交流：
+              span 有机会免费参加My Blog主办的盛会和活动，获得更多的交流机会
+    .expert_content_container
+      .expert_content
+        .expert_content_title 推荐专家
+        .expert_content_experts(statuscode='#{params.statusCode}')
+          .expert_message
+            .head_portrait
+              img(src='#{params.experts[0].photo}')
+            p.name
+              a(href='blogsShow?loginaccount=#{params.login.account}&account=#{params.experts[0].account}') #{params.experts[0].nickName}
+            p.position
+              span.position_location #{params.experts[0].city}
+              span.position_job #{params.experts[0].job}
+            .article_message
+              span.article_account
+                b #{params.experts[0].blogsCount}
+              br
+              span.article_account_label 文章数
+            .views_time
+              b #{params.experts[0].readCount}
+              br
+              span 阅读数
+            .clear_float
+            .focusHim
+              a(href='/addFocus?loginaccount=#{params.login.account}&focusAccount=#{params.experts[0].account}&requestPage=blogExperts') 关注
+          .expert_message
+            .head_portrait
+              img(src='#{params.experts[1].photo}')
+            p.name
+              a(href='blogsShow?loginaccount=#{params.login.account}&account=#{params.experts[1].account}') #{params.experts[1].nickName}
+            p.position
+              span.position_location #{params.experts[1].city}
+              span.position_job #{params.experts[1].job}
+            .article_message
+              span.article_account
+                b #{params.experts[1].blogsCount}
+              br
+              span.article_account_label 文章数
+            .views_time
+              b #{params.experts[1].readCount}
+              br
+              span 阅读数
+            .clear_float
+            .focusHim
+              a(href='/addFocus?loginaccount=#{params.login.account}&focusAccount=#{params.experts[1].account}&requestPage=blogExperts') 关注
+          .expert_message
+            .head_portrait
+              img(src='#{params.experts[2].photo}')
+            p.name
+              a(href='blogsShow?loginaccount=#{params.login.account}&account=#{params.experts[2].account}') #{params.experts[2].nickName}
+            p.position
+              span.position_location #{params.experts[2].city}
+              span.position_job #{params.experts[2].job}
+            .article_message
+              span.article_account
+                b #{params.experts[2].blogsCount}
+              br
+              span.article_account_label 文章数
+            .views_time
+              b #{params.experts[2].readCount}
+              br
+              span 阅读数
+            .clear_float
+            .focusHim
+              a(href='/addFocus?loginaccount=#{params.login.account}&focusAccount=#{params.experts[2].account}&requestPage=blogExperts') 关注
+          .expert_message
+            .head_portrait
+              img(src='#{params.experts[3].photo}')
+            p.name
+              a(href='blogsShow?loginaccount=#{params.login.account}&account=#{params.experts[3].account}') #{params.experts[3].nickName}
+            p.position
+              span.position_location #{params.experts[3].city}
+              span.position_job #{params.experts[3].job}
+            .article_message
+              span.article_account
+                b #{params.experts[3].blogsCount}
+              br
+              span.article_account_label 文章数
+            .views_time
+              b #{params.experts[3].readCount}
+              br
+              span 阅读数
+            .clear_float
+            .focusHim
+              a(href='/addFocus?loginaccount=#{params.login.account}&focusAccount=#{params.experts[3].account}&requestPage=blogExperts') 关注
+          .expert_message
+            .head_portrait
+              img(src='#{params.experts[4].photo}')
+            p.name
+              a(href='blogsShow?loginaccount=#{params.login.account}&account=#{params.experts[4].account}') #{params.experts[4].nickName}
+            p.position
+              span.position_location #{params.experts[4].city}
+              span.position_job #{params.experts[4].job}
+            .article_message
+              span.article_account
+                b #{params.experts[4].blogsCount}
+              br
+              span.article_account_label 文章数
+            .views_time
+              b #{params.experts[4].readCount}
+              br
+              span 阅读数
+            .clear_float
+            .focusHim
+              a(href='/addFocus?loginaccount=#{params.login.account}&focusAccount=#{params.experts[4].account}&requestPage=blogExperts') 关注
+          .expert_message
+            .head_portrait
+              img(src='#{params.experts[5].photo}')
+            p.name
+              a(href='blogsShow?loginaccount=#{params.login.account}&account=#{params.experts[5].account}') #{params.experts[5].nickName}
+            p.position
+              span.position_location #{params.experts[5].city}
+              span.position_job #{params.experts[5].job}
+            .article_message
+              span.article_account
+                b #{params.experts[5].blogsCount}
+              br
+              span.article_account_label 文章数
+            .views_time
+              b #{params.experts[5].readCount}
+              br
+              span 阅读数
+            .clear_float
+            .focusHim
+              a(href='/addFocus?loginaccount=#{params.login.account}&focusAccount=#{params.experts[5].account}&requestPage=blogExperts') 关注
+          .expert_message
+            .head_portrait
+              img(src='#{params.experts[6].photo}')
+            p.name
+              a(href='blogsShow?loginaccount=#{params.login.account}&account=#{params.experts[6].account}') #{params.experts[6].nickName}
+            p.position
+              span.position_location #{params.experts[6].city}
+              span.position_job #{params.experts[6].job}
+            .article_message
+              span.article_account
+                b #{params.experts[6].blogsCount}
+              br
+              span.article_account_label 文章数
+            .views_time
+              b #{params.experts[6].readCount}
+              br
+              span 阅读数
+            .clear_float
+            .focusHim
+              a(href='/addFocus?loginaccount=#{params.login.account}&focusAccount=#{params.experts[6].account}&requestPage=blogExperts') 关注
+          .expert_message
+            .head_portrait
+              img(src='#{params.experts[7].photo}')
+            p.name
+              a(href='blogsShow?loginaccount=#{params.login.account}&account=#{params.experts[7].account}') #{params.experts[7].nickName}
+            p.position
+              span.position_location #{params.experts[7].city}
+              span.position_job #{params.experts[7].job}
+            .article_message
+              span.article_account
+                b #{params.experts[7].blogsCount}
+              br
+              span.article_account_label 文章数
+            .views_time
+              b #{params.experts[7].readCount}
+              br
+              span 阅读数
+            .clear_float
+            .focusHim
+              a(href='/addFocus?loginaccount=#{params.login.account}&focusAccount=#{params.experts[7].account}&requestPage=blogExperts') 关注
+          .clear_float
+  script(type='text/javascript', src='/javascript/blogExperts_js.js')

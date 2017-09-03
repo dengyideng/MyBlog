@@ -1,0 +1,54 @@
+<p>（1）IE</p>
+
+                                <p>在IE中，事件没有event属性，但是window有，即window.event。</p>
+
+                                <p>获取event的方式为：</p>
+
+                                <p>&nbsp;</p>
+
+                                <p><strong>[javascript]</strong>&nbsp;<a href='http://blog.csdn.net/michael8512/article/details/77427648#' onclick='dp.sh.Toolbar.Command('ViewSource',this);return false;' target='_blank'>view plain</a>&nbsp;<a href='http://blog.csdn.net/michael8512/article/details/77427648#' onclick='dp.sh.Toolbar.Command('CopyToClipboard',this);return false;' target='_blank'>copy</a></p>
+
+                                <ol>
+	                                <li>document.onclick=function(){&nbsp;&nbsp;</li>
+	                                <li>&nbsp;&nbsp;alert(window.event.clientX);&nbsp;&nbsp;</li>
+	                                <li>}&nbsp;&nbsp;</li>
+                                </ol>
+
+                                <p>&nbsp;</p>
+
+                                <p>获取调用事件的对象window.event.srcElement</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>（2）FIreFox</p>
+
+                                <p>FireFox中没有window.event，但是事件自带event属性</p>
+
+                                <p>&nbsp;</p>
+
+                                <p><strong>[javascript]</strong>&nbsp;<a href='http://blog.csdn.net/michael8512/article/details/77427648#' onclick='dp.sh.Toolbar.Command('ViewSource',this);return false;' target='_blank'>view plain</a>&nbsp;<a href='http://blog.csdn.net/michael8512/article/details/77427648#' onclick='dp.sh.Toolbar.Command('CopyToClipboard',this);return false;' target='_blank'>copy</a></p>
+
+                                <ol>
+	                                <li>document.onclick=function(event){&nbsp;&nbsp;</li>
+	                                <li>&nbsp;&nbsp;alert(event.clientX);&nbsp;&nbsp;</li>
+	                                <li>}&nbsp;&nbsp;</li>
+                                </ol>
+
+                                <p>获取调用事件的对象event.target<br />
+                                &nbsp;</p>
+
+                                <p>&nbsp;</p>
+
+                                <p>（3）兼容的方法</p>
+
+                                <p>&nbsp;</p>
+
+                                <p><strong>[javascript]</strong>&nbsp;<a href='http://blog.csdn.net/michael8512/article/details/77427648#' onclick='dp.sh.Toolbar.Command('ViewSource',this);return false;' target='_blank'>view plain</a>&nbsp;<a href='http://blog.csdn.net/michael8512/article/details/77427648#' onclick='dp.sh.Toolbar.Command('CopyToClipboard',this);return false;' target='_blank'>copy</a></p>
+
+                                <ol>
+	                                <li>document.onclick=function(e){&nbsp;&nbsp;</li>
+	                                <li>&nbsp;&nbsp;var&nbsp;e=window.event&nbsp;||&nbsp;e;&nbsp;&nbsp;</li>
+	                                <li>&nbsp;&nbsp;alert(e.clientX);&nbsp;&nbsp;</li>
+	                                <li>&nbsp;&nbsp;alert(e.target&nbsp;||&nbsp;e.srcElement);&nbsp;&nbsp;</li>
+	                                <li>}&nbsp;&nbsp;</li>
+                                </ol>

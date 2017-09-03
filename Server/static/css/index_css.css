@@ -1,0 +1,366 @@
+body{
+	margin: 0;
+}
+
+p{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+h3{
+	margin: 0;
+}
+
+pre{
+	margin: 0;
+}
+
+blockquote{
+	margin-top: 3px;
+}
+
+.search{
+	float: right;
+	line-height: 47px;
+	padding-right: 30px;
+}
+
+#banner{
+	background-color: rgb(72, 82, 94);
+	height: 40px;
+}
+
+#left{
+	width: 40px;
+	height: 40px;
+	margin-left: 70px;
+	background-color: rgb(204, 0, 0);
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+	font-size: 28px;
+	font-family: 微软雅黑;
+	float: left;
+}
+
+#right{
+	float: left;
+	color: white;
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 25px;
+}
+
+#navigationBar{
+	height: 47px;
+	border-bottom: 3px solid rgb(225, 225, 225);
+}
+
+.navigator{
+	height: 47px;
+	margin-left: 70px;
+	float: left;
+}
+
+#navigatorIndex{
+	border-bottom: 3px solid rgb(204, 0, 0);
+}
+
+.navigator:hover{
+	border-bottom: 3px solid rgb(204, 0, 0);
+}
+
+.navigator>a{
+	text-decoration: none;
+	color: #5b5b5b;
+	line-height: 47px;
+	font-size: 20px;
+	font-family: 微软雅黑;
+}
+
+#content{
+	background-color: rgb(231, 236, 239);
+	padding: 20px 20px 20px 70px;
+	position: relative;
+	height: 1150px;
+}
+
+.blogArticle{
+	height: 160px;
+	width: 820px;
+	margin-bottom: 2px;
+	background-color: white;
+	padding: 20px 15px 20px 15px;
+}
+
+.page_turning{
+	height: 100px;
+	width: 820px;
+	background-color: rgb(231, 236, 239);
+	padding: 20px 15px 20px 15px;
+	color: #666;
+	font-family: Microsoft yahei;
+	text-align: center;
+	line-height: 22px;
+	font-size: 16px;
+}
+
+.page_turning>a{
+	display: inline-block;
+	height: 22px;
+	background-color: white;
+	padding: 0 5px 0 5px;
+	margin-left: 8px;
+	color: #666;
+}
+
+.page_turning>a.choosed{
+	background-color: rgb(204, 0, 0);
+	color: white;
+}
+
+#blogArticleLast{
+	margin-bottom: none;
+}
+
+.bloggerMessage{
+	width: 130px;
+	height: 160px;
+	border-right: 2px solid rgb(231, 236, 239);
+	float: left;
+}
+
+.blogDetails{
+	float: left;
+	width: 688px;
+	height: 160px;
+}
+
+.photo{
+	width: 60px;
+	height: 60px;
+	position: relative;
+	left: 35px;
+	top: 20px;
+	border-radius: 50%;
+}
+
+.nickName{
+	display: block;
+	text-decoration: none;
+	color: gray;
+	font-family: 微软雅黑;
+	text-align: center;
+	position: relative;
+	top: 30px;
+}
+
+.register{
+	float: right;
+	padding-right: 2px;
+	border-right: 1px solid #5b5b5b;
+	height: 16px;
+	position: relative;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.welcome{
+	float: right;
+	height: 16px;
+	position: relative;
+	top: 50%;
+	margin-top: -8px;
+	margin-right: 20px;
+	font-family: Microsoft yahei;
+	color:  #5b5b5b;
+	font-size: 15px;
+}
+
+.login{
+	float: right;
+	margin-right: 30px;
+	padding-left: 2px;
+	height: 16px;
+	position: relative;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.login>a{
+	color: #5b5b5b;
+	text-decoration: none;
+	line-height: 16px;
+	font-family: 微软雅黑;
+	font-size: 15px;
+	vertical-align: top;
+}
+
+.register>a{
+	color: #5b5b5b;
+	text-decoration: none;
+	line-height: 16px;
+	font-family: 微软雅黑;
+	font-size: 15px;
+	vertical-align: top;
+}
+
+.title{
+	margin: 10px auto 10px 20px;
+}
+
+.title>h3>a{
+	font-family: SimHei;
+	color: #3c3c3c;
+}
+
+.blogContent{
+	margin: 5px 5px auto 20px;
+	height: 50px;
+	width: 663px;
+	overflow: hidden;
+}
+
+.blogContent>p{
+	font-family: SimHei;
+	color: #8e8e8e;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.blogContent ol{
+	font-family: SimHei;
+	color: #8e8e8e;
+	font-size: 14px;
+	line-height: 25px;
+	margin: 0;
+}
+
+.blogContent h1{
+	font-size: 25px;
+}
+
+.category{
+	float: left;
+	margin: 25px 0 8px 20px;
+	width: 120px;
+	height: 30px;
+}
+
+.views{
+	float: left;
+	margin: 25px 0 8px 0;
+	height: 30px;
+	width: 543px;
+}
+
+.icon{
+	float: left;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+}
+
+i.userDefined{
+	font-size: 15px;
+	position: relative;
+	top: 50%;
+	color: #8e8e8e;
+}
+
+.categoryLabel{
+	font-size: 15px;
+	color: #3c3c3c;
+	font-family: SimHei;
+	float: left;
+	height: 30px;
+}
+
+.categoryLabel>a{
+	position: relative;
+	top: 50%;
+}
+
+.viewsTime{
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+}
+
+.viewsTime>p{
+	position: relative;
+	top: 50%;
+	font-size: 15px;
+	color: #3c3c3c;
+	font-family: SimHei;
+}
+
+.viewsIcon{
+	float: right;
+	width: 68px;
+	height: 30px;
+	text-align: right;
+}
+
+.createTime{
+	float: right;
+	width: 440px;
+	height: 30px;
+	text-align: right;
+}
+
+.createTime>p{
+	position: relative;
+	top: 50%;
+	font-size: 15px;
+	color: #3c3c3c;
+	font-family: SimHei;
+}
+
+.navigatorList{
+	position: absolute;
+	left: 920px;
+	top: 20px;
+	margin: 0 10px 0 25px;
+	background-color: white;
+	height: 1000px;
+	width: 333px;
+}
+
+.navigatorList_title{
+	height: 60px;
+	width: 308px;
+	border-bottom: 1px solid #d0d0d0;
+	padding-left: 25px;
+	font-family: SimHei;
+	color: #3c3c3c;
+	line-height: 60px;
+}
+
+.navigatorList_item{
+	height: 60px;
+	width: 283px;
+	margin: 0 25px 0 25px;
+	border-bottom: 1px dashed #d0d0d0;
+	line-height: 60px;
+	position: relative;
+}
+
+.navigatorList_item>a{
+	font-family: 微软雅黑;
+	color: #5b5b5b;
+}
+
+.navigatorList_item>a>span{
+	position: absolute;
+	left: 30px;
+}
+
+a.notNavigator:hover{
+	color: rgb(204, 0, 0);
+}
